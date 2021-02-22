@@ -1,0 +1,33 @@
+.track.range-cloud {
+  width: 100px !important;
+}
+
+.range-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.range-panel mdb-range-input {
+  width: 74%;
+}
+
+.price-panel {
+  width: 90%;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  display: flex;
+  align-items: center;
+}
+
+.price-panel p {
+  width: 48%;
+}
+
+#max-price {
+  text-align: start;
+}
+
+#min-price {
+  text-align: end;
+}

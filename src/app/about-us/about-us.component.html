@@ -1,0 +1,63 @@
+<div class="row my-5" *ngIf="loader">
+    <div class="col-12">
+
+        <div class="p-5 my-5 flex-center">
+            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+        </div>
+
+    </div>
+</div>
+
+<div class="full-screen2 pt-5" *ngIf="!loader">
+
+    <section>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-12">
+
+                    <mdb-card cascade="true" wider="true" reverse="true" class="my-4">
+
+                        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+                            <mdb-card-img [src]="aboutUsPage?.imageUrl"></mdb-card-img>
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <mdb-card-body cascade="true" class="text-center">
+
+                            <mdb-card-title>
+                                <h4>
+                                    <strong>{{ aboutUsPage?.title }}</strong>
+                                </h4>
+                            </mdb-card-title>
+
+                            <h5 class="indigo-text">
+                                <span>{{ aboutUsPage?.subTitle }}</span>
+                            </h5>
+
+                            <mdb-card-text>
+                                <div [innerHTML]="aboutUsPage?.description"></div>
+                            </mdb-card-text>
+
+                            <a *ngFor="let link of aboutUsPage?.socialLinks" class="px-2 icons-sm" [href]="link.link"
+                                [ngStyle]="{'color': link.color}">
+                                <mdb-icon fab [icon]="link.icon"> </mdb-icon>
+                            </a>
+
+                        </mdb-card-body>
+
+                    </mdb-card>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>

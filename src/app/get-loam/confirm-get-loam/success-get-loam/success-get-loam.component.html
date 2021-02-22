@@ -1,0 +1,101 @@
+<div class="row my-5" *ngIf="loader">
+    <div class="col-12">
+
+        <div class="p-5 my-5 flex-center">
+            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+        </div>
+
+    </div>
+</div>
+
+<div class="full-screen2 pt-5" *ngIf="!loader">
+
+    <div class="container mt-6 mb-3">
+        <div class="row">
+            <div class="col-12">
+
+                <div *ngIf="buyLoanInfo" class="card-item p-4">
+                    <div class="row">
+                        <div class="col-12 flex-center justify-content-center">
+
+                            <mdb-icon style="color: #00C851 !important;" fas icon="check-circle" size="5x"
+                                class="mb-3 animated rotateIn"></mdb-icon>
+
+                        </div>
+                        <div class="col-12">
+
+                            <p class="text-center font-weight-bold">{{ second }}</p>
+
+                        </div>
+                        <div class="col-12">
+
+                            <p class="text-center">سفارش مبلغ مورد نظرتان برای دریافت وام با موفقیت پذیرفته شد.</p>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-6 p-1">
+
+                                    <h3 class="text-end">مبلغ سفاش شده : </h3>
+
+                                </div>
+                                <div class="col-6 p-1">
+
+                                    <h3>{{ utilityFunctions.moneySeparator(buyLoanInfo.totalPrice.toString()) }} تومان
+                                    </h3>
+
+                                </div>
+                                <div class="col-6 p-1">
+
+                                    <h3 class="text-end">به کد رهگیری : </h3>
+
+                                </div>
+                                <div class="col-6 p-1">
+
+                                    <h3>{{ buyLoanInfo.trackingCode }}</h3>
+
+                                </div>
+                                <div class="col-6 p-1">
+
+                                    <h3 class="text-end">ثبت شده در تاریخ : </h3>
+
+                                </div>
+                                <div class="col-6 p-1">
+
+                                    <h3>{{ utilityFunctions.dateConvertToPersian(buyLoanInfo.dateTime) }}</h3>
+
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <p class="text-center">از اعتماد شما سپاس گزاریم . در کوتاهترین زمان مبلغ درخواستی شما از
+                                طریق <strong class="font-weight-bold"> شماره شبا </strong> موجود در پنل کاربریتان ، کل
+                                مبلغ سفارش شده واریز میشود . <br> با مراجعه به پنل کاربری از وضعیت اقساط و پرداختی
+                                هایتان مطلع شوید .</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="!buyLoanInfo" class="card-item p-4">
+                    <div class="row">
+                        <div class="col-12 flex-center justify-content-center">
+
+                            <mdb-icon style="color: #e65100 !important;" fas icon="exclamation-triangle" size="5x"
+                                class="mb-3 animated rotateIn"></mdb-icon>
+
+                        </div>
+                        <div class="col-12">
+
+                            <p class="text-danger-c text-center">اخطار!!! متاسفانه عملیات با شکست روبرو شد.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

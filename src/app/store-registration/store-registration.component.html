@@ -1,0 +1,359 @@
+<div class="full-screen2 pt-5">
+
+    <header>
+
+        <mdb-card class="z-depth-3">
+            <div class="text-white text-center py-5 px-4">
+                <div class="py-5">
+                    <h1 class="card-title h2 my-4 py-2 text-dark font-weight-bold">ثبت فروشگاه در سایت</h1>
+                </div>
+            </div>
+        </mdb-card>
+
+        <div class="navigation-links">
+            <!-- <app-breadcrumbs></app-breadcrumbs> -->
+        </div>
+    </header>
+
+    <section id="cooperation-section">
+
+        <h2 class="text-center h2 py-2">بخش فرایند همکاری</h2>
+        <p class="text-center">مراحل فرایند همکاری و ثبت فروشگاه در سایت به آسانی</p>
+
+        <div class="cooperation">
+
+            <canvas id="dashed-line"></canvas>
+
+            <div class="item-wrapper" *ngFor="let item of ItemWrapper; let i = index;">
+                <div class="item-draw">
+                    <div class="item-content-draw text-start">
+                        <div class="i-c-icon">
+                            <img src="../../assets/images/profile.jpg" alt="alt">
+                        </div>
+                        <div class="i-c-desc">
+                            <h5>{{i + 1}} - تعریف کارت اعتباری</h5>
+                            <p>
+                                تعریف کارت اعتباری فروشگاه
+                                در سایت تعاونی رنتر
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-12">
+
+                    <div class="benefits z-depth-2">
+                        <h2 class="text-start h2 py-5">مزایای همکاری</h2>
+                        <div>
+                            <!-- Nav Tabs -->
+                            <mdb-tabset #staticTabs [vertical]="true"
+                                [buttonClass]="'md-pills pills-primary text-center transparent'"
+                                [contentClass]="'card'">
+                                <!--Panel 1-->
+                                <mdb-tab heading="خرید اقساطی آسان">
+                                    <div class="row">
+                                        <div class="flex-center">
+                                            <br>
+                                            <div
+                                                class="benefit-content text-start flex-center flex-row align-items-center">
+                                                <div class="pill-icon">
+                                                    <img src="../../assets/images/Icons/1.jpg" alt="icon">
+                                                </div>
+                                                <div class="pill-desc">
+                                                    <h5>خرید اقساطی آسان</h5>
+                                                    <p>مشتریان شما با تهیه کارت های اعتباری بدون نیاز به چک و ضامن می
+                                                        توانند خرید اقساطی خود را انجام دهند.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </mdb-tab>
+                                <!--Panel 2-->
+                                <mdb-tab heading="ریسک صفر">
+                                    <div class="row">
+                                        <div class="flex-center">
+                                            <br>
+                                            <div
+                                                class="benefit-content text-start flex-center flex-row align-items-center">
+                                                <div class="pill-icon">
+                                                    <img src="../../assets/images/Icons/2.jpg" alt="icon">
+                                                </div>
+                                                <div class="pill-desc">
+                                                    <h5>خرید اقساطی آسان</h5>
+                                                    <p>گر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به
+                                                        متن های برخورده اید که با نام لورم ایپسوم شناخته می‌شوند. لورم
+                                                        ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) متنی ساختگی و بدون
+                                                        معنی است که برای امتحان فونت و یا پر کردن فضا در یک طراحی
+                                                        گرافیکی و یا صنعت چاپ استفاده میشود.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </mdb-tab>
+                                <!--Panel 3-->
+                                <mdb-tab heading="برندینگ">
+                                    <div class="row">
+                                        <div class="flex-center">
+                                            <br>
+                                            <div
+                                                class="benefit-content text-start flex-center flex-row align-items-center">
+                                                <div class="pill-icon">
+                                                    <img src="../../assets/images/Icons/3.jpg" alt="icon">
+                                                </div>
+                                                <div class="pill-desc">
+                                                    <h5>خرید اقساطی آسان</h5>
+                                                    <p>اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به
+                                                        متن های برخورده اید که با نام لورم ایپسوم شناخته می‌شوند.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </mdb-tab>
+                            </mdb-tabset>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="conditions-section">
+
+        <h2 class="text-center h2 py-2">شرایط همکاری</h2>
+        <p class="text-center">برای همکاری با ایران‌رنتر، فروشگاه شما باید شرایط زیر را داشته باشد</p>
+
+        <div class="row">
+
+            <div class="conditions col-xl-3 col-lg-6 col-md-6 col-sm-12">
+
+                <div class="text-center conditions-item hoverable">
+                    <img src="../../assets/images/Icons/1-conditions.png" alt="alt">
+                    <h5>نماد اعنماد الکترونیکی</h5>
+                </div>
+
+            </div>
+
+            <div class="conditions col-xl-3 col-lg-6 col-md-6 col-sm-12">
+
+                <div class="text-center conditions-item">
+                    <img src="../../assets/images/Icons/2-conditions.png" alt="alt">
+                    <h5>امکان سفارش آنلاین</h5>
+                </div>
+
+            </div>
+
+            <div class="conditions col-xl-3 col-lg-6 col-md-6 col-sm-12">
+
+                <div class="text-center conditions-item">
+                    <img src="../../assets/images/Icons/3-conditions.png" alt="alt">
+                    <h5>سیستم صدور کد تخفیف</h5>
+                </div>
+
+            </div>
+
+            <div class="conditions col-xl-3 col-lg-6 col-md-6 col-sm-12">
+
+                <div class="text-center conditions-item">
+                    <img src="../../assets/images/Icons/4-conditions.png" alt="alt">
+                    <h5>عدم فروش کالای غیر مجاز</h5>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="register-section">
+
+        <h2 class="text-center h2 py-2">فرم همکاری</h2>
+        <p class="text-center">جهت اضافه شدن فروشگاه خود به ایران رنتر ، لطفا فرم زیر را تکمیل کنید</p>
+
+        <form id="register_store_form" (ngSubmit)="onRegisterStore()" [formGroup]="registerStore">
+            <div class="z-depth-2 container">
+                <div class="row">
+
+                    <div class="register-panel col-6">
+
+                        <div class="md-form">
+                            <input type="text" id="fullname_input" class="form-control" length="50" mdbCharCounter
+                                mdbInput name="fullname_reg" [formControl]="fullname_reg">
+                            <label for="fullname_input">نام و نام خانوادگی</label>
+                        </div>
+                        <div [hidden]="fullname_reg.valid || fullname_reg.untouched">
+                            <div [hidden]="!fullname_reg.hasError('required')" class="text-danger valid-m">
+                                لطفا نام کامل را وارد کنید
+                            </div>
+                            <div [hidden]="!fullname_reg.hasError('minlength')" class="text-danger valid-m">
+                                نام وارد شده کمتر از 3 کاراکتر است
+                            </div>
+                            <div [hidden]="!fullname_reg.hasError('maxlength')" class="text-danger valid-m">
+                                نام وارد شده بیشتر از تعداد مجاز است
+                            </div>
+                            <div [hidden]="!fullname_reg.hasError('pattern')" class="text-danger valid-m">
+                                لطفا نام خود را به فارسی تایپ کنید
+                            </div>
+                        </div>
+
+                        <div class="md-form">
+                            <input type="email" id="email_input" class="form-control" mdbInput name="email_reg"
+                                [formControl]="email_reg">
+                            <label for="email_input">ایمیل</label>
+                        </div>
+                        <div [hidden]="email_reg.valid || email_reg.untouched">
+                            <div [hidden]="!email_reg.hasError('required')" class="text-danger valid-m">
+                                لطفا ایمیلتان را وارد کنید
+                            </div>
+                            <div [hidden]="!email_reg.hasError('pattern')" class="text-danger valid-m">
+                                لطفا ایمیل صحیح وارد کنید
+                            </div>
+                        </div>
+
+                        <div dir="ltr" class="md-form">
+                            <input type="url" id="website_input" class="form-control" mdbInput name="url_reg"
+                                [formControl]="url_reg">
+                            <label for="website_input">آدرس سایت</label>
+                        </div>
+                        <div [hidden]="url_reg.valid || url_reg.untouched">
+                            <div [hidden]="!url_reg.hasError('required')" class="text-danger valid-m">
+                                لطفا آدرس سایت فروشگاهیتان را وارد کنید
+                            </div>
+                            <div [hidden]="!url_reg.hasError('pattern')" class="text-danger valid-m">
+                                لطفا آدرس صحیح وارد کنید
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="register-panel col-6">
+
+                        <div class="md-form" dir="ltr">
+                            <label class="sr-only" for="phonenumber_input">شماره تماس</label>
+                            <div class="md-form input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text md-addon">+98</span>
+                                </div>
+                                <input mdbInput type="text" class="form-control pl-0 rounded-0" id="phonenumber_input"
+                                    placeholder="شماره تماس" name="phonenumber_reg" [formControl]="phonenumber_reg">
+                            </div>
+                        </div>
+                        <div [hidden]="phonenumber_reg.valid || phonenumber_reg.untouched">
+                            <div [hidden]="!phonenumber_reg.hasError('required')" class="text-danger valid-m">
+                                لطفا شماره تلفن خود را وارد کنید
+                            </div>
+                            <div [hidden]="!phonenumber_reg.hasError('pattern')" class="text-danger valid-m">
+                                لطفا شماره صحیح وارد کنید
+                            </div>
+                        </div>
+
+                        <div class="md-form">
+                            <input type="text" id="storename_input" class="form-control" length="50" mdbCharCounter
+                                mdbInput name="storename_reg" [formControl]="storename_reg">
+                            <label for="storename_input">نام فروشگاه</label>
+                        </div>
+                        <div [hidden]="storename_reg.valid || storename_reg.untouched">
+                            <div [hidden]="!storename_reg.hasError('required')" class="text-danger valid-m">
+                                لطفا نام فروشگاه خود را وارد کنید
+                            </div>
+                            <div [hidden]="!storename_reg.hasError('minlength')" class="text-danger valid-m">
+                                نام وارد شده کمتر از 3 کاراکتر است
+                            </div>
+                            <div [hidden]="!storename_reg.hasError('maxlength')" class="text-danger valid-m">
+                                نام وارد شده بیشتر از تعداد مجاز است
+                            </div>
+                        </div>
+
+                        <div class="md-form">
+                            <mdb-select dir="ltr" [options]="optionsSelect" placeholder="دسته بندی فروشگاه"
+                                (selected)="optionSelected($event)" name="category_reg" [formControl]="category_reg">
+                            </mdb-select>
+                        </div>
+                        <div [hidden]="category_reg.valid || category_reg.untouched">
+                            <div [hidden]="!category_reg.hasError('required')" class="text-danger valid-m">
+                                لطفا دسته بندی خود را انتخاب کنید
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <button type="submit" mdbBtn color="primary" [disabled]="!registerStore.valid" mdbWavesEffect>ثبت
+                        درخواست</button>
+                </div>
+
+            </div>
+        </form>
+
+    </section>
+
+    <section id="brands-section">
+
+        <h2 class="text-center h2 py-2">انواع برند ها</h2>
+        <p class="text-center">لیستی از برند انواع فروشگاه های معتبر ثبت شده در سایت</p>
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="marquee-panel">
+                    <ng-marquee speed="slow">
+                        <div class="flex-center justify-content-start align-items-center">
+                            <div class="marquee-brand z-depth-1" [routerLink]="['/home/all-stores/view-category/1/2']">
+                                <img src="../../assets/images/gamiha-1573633770.png" alt="">
+                            </div>
+                            <div class="marquee-brand z-depth-1" [routerLink]="['/home/all-stores/view-category/1/2']">
+                                <img src="../../assets/images/gamiha-1573633770.png" alt="">
+                            </div>
+                            <div class="marquee-brand z-depth-1" [routerLink]="['/home/all-stores/view-category/1/2']">
+                                <img src="../../assets/images/gamiha-1573633770.png" alt="">
+                            </div>
+                        </div>
+                    </ng-marquee>
+                    <ng-marquee speed="slow">
+                        <div class="flex-center justify-content-start align-items-center">
+                            <div class="marquee-brand z-depth-1" [routerLink]="['/home/all-stores/view-category/1/2']">
+                                <img src="../../assets/images/gamiha-1573633770.png" alt="">
+                            </div>
+                            <div class="marquee-brand z-depth-1" [routerLink]="['/home/all-stores/view-category/1/2']">
+                                <img src="../../assets/images/gamiha-1573633770.png" alt="">
+                            </div>
+                            <div class="marquee-brand z-depth-1" [routerLink]="['/home/all-stores/view-category/1/2']">
+                                <img src="../../assets/images/gamiha-1573633770.png" alt="">
+                            </div>
+                        </div>
+                    </ng-marquee>
+                    <ng-marquee speed="slow">
+                        <div class="flex-center justify-content-start align-items-center">
+                            <div class="marquee-brand z-depth-1" [routerLink]="['/home/all-stores/view-category/1/2']">
+                                <img src="../../assets/images/gamiha-1573633770.png" alt="">
+                            </div>
+                            <div class="marquee-brand z-depth-1" [routerLink]="['/home/all-stores/view-category/1/2']">
+                                <img src="../../assets/images/gamiha-1573633770.png" alt="">
+                            </div>
+                        </div>
+                    </ng-marquee>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>

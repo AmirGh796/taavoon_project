@@ -1,0 +1,181 @@
+<div class="header-form">
+    <h2>{{ formPage?.title }}</h2>
+    <p *ngIf="formPage?.description && formPage?.description?.length > 0">
+        {{ formPage?.description }}
+    </p>
+    <hr>
+</div>
+
+<div class="main-form">
+    <form #formChilds (ngSubmit)="onSendDataFromForm()">
+        <div class="row">
+            <div *ngFor="let control of formControls; let i = index"
+                [ngClass]="{'col-xl-4 col-lg-6 col-md-6 col-sm-12': control.size === 1, 'col-xl-6 col-lg-6 col-md-12 col-sm-12': control.size === 2, 'col-12': control.size === 3}">
+
+                <div *ngIf="control.controlType === 1">
+                    <div class="md-form md-outline">
+                        <input type="text" [required]="control.required" id="{{ control.elementId }}"
+                            class="form-control" [length]="control.maxLength" [min]="'0'" [max]="control.maxLength"
+                            mdbCharCounter mdbInput [name]="control.elementName" [(ngModel)]="control.elementValue"
+                            [ngModelOptions]="{standalone: true}">
+                        <label for="{{ control.elementId }}">{{ control.title }}</label>
+                    </div>
+                    <div *ngIf="control.required">
+                        <div *ngIf="!control.elementValue && !control.elementValue?.length" class="text-danger valid-m">
+                            پرکردن این فیلد الزامیست
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="control.controlType === 2">
+                    <div class="md-form md-outline">
+                        <textarea [rows]="control.rows" type="text" id="{{ control.elementId }}"
+                            class="md-textarea form-control" [required]="control.required" [length]="control.maxLength"
+                            mdbCharCounter mdbInput [name]="control.elementName" [(ngModel)]="control.elementValue"
+                            [ngModelOptions]="{standalone: true}"></textarea>
+                        <label for="{{ control.elementId }}">{{ control.title }}</label>
+                    </div>
+                    <div *ngIf="control.required">
+                        <div *ngIf="!control.elementValue && !control.elementValue?.length" class="text-danger valid-m">
+                            پرکردن این فیلد الزامیست
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="control.controlType === 3">
+                    <div *ngIf="control.child && control.child?.length" class="radio-series">
+                        <div *ngFor="let elementRB of control.child" class="md-form m-0">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="{{ elementRB.elementId }}"
+                                    [name]="elementRB.elementName" [value]="elementRB.checked"
+                                    (change)="setRBChecked(elementRB); elementRB.checked = $event.target.checked"
+                                    mdbInput>
+                                <label class="form-check-label" for="{{ elementRB.elementId }}">
+                                    {{ elementRB.title }}</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="!control.child || !control.child?.length" class="md-form m-0">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="{{ control.elementId }}"
+                                [name]="control.elementName" [value]="control.checked"
+                                (change)="control.checked = $event.target.checked" mdbInput>
+                            <label class="form-check-label" for="{{ control.elementId }}">
+                                {{ control.title }}</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="control.controlType === 4">
+                    <div class="md-form">
+                        <mdb-checkbox id="{{ control.elementId }}" [(ngModel)]="control.checked"
+                            [ngModelOptions]="{standalone: true}">
+                            {{ control.title }}
+                        </mdb-checkbox>
+                    </div>
+                </div>
+
+                <div *ngIf="control.controlType === 5">
+                    <div class="md-form">
+                        <button type="submit" id="{{ control.elementId }}" [name]="control.elementName" mdbBtn
+                            [size]="control.size === 1 ? 'sm' : control.size === 2 ? 'md' : 'lg'" color="primary"
+                            mdbWavesEffect>{{ control.title }}</button>
+                    </div>
+                </div>
+
+                <div *ngIf="control.controlType === 6">
+                    <label id="{{ control.elementId }}" for="{{ control.forElement }}">{{ control.title }}</label>
+                </div>
+
+                <div *ngIf="control.controlType === 7">
+                    <p id="{{ control.elementId }}" class="description-form" [innerHTML]="control.title"></p>
+                </div>
+
+                <div *ngIf="control.controlType === 8">
+                    <h3 id="{{ control.elementId }}">{{ control.title }}</h3>
+                </div>
+
+                <div *ngIf="control.controlType === 9">
+                    <h6 id="{{ control.elementId }}">{{ control.title }}</h6>
+                </div>
+
+                <div *ngIf="control.controlType === 10" class="full-width">
+                    <div id="{{ control.elementId }}" class="alert alert-warning full-width" role="alert">
+                        {{ control.title }}
+                    </div>
+                </div>
+
+                <div *ngIf="control.controlType === 11">
+                    <div id="{{ control.elementId }}" class="form-seperator"></div>
+                </div>
+
+                <div *ngIf="control.controlType === 12">
+                    <div id="{{ control.elementId }}" class="line-space"></div>
+                </div>
+
+                <div *ngIf="control.controlType === 13">
+                    <ol>
+                        <ng-container *ngFor="let item of control.child">
+                            <li *ngIf="item.forElement === control.elementName" id="{{ item.elementId }}">
+                                {{ item.title }}
+                            </li>
+                        </ng-container>
+                    </ol>
+                </div>
+
+                <div *ngIf="control.controlType === 14">
+                    <ul>
+                        <ng-container *ngFor="let item of control.child">
+                            <li *ngIf="item.forElement === control.elementName" id="{{ item.elementId }}">
+                                {{ item.title }}
+                            </li>
+                        </ng-container>
+                    </ul>
+                </div>
+
+                <div *ngIf="control.controlType === 15">
+                    <div class="md-form">
+                        <dp-date-picker id="{{ control.elementId }}" mdbInput dir="ltr" [config]="datePickerConfig"
+                            mode="day" [placeholder]="control.title" [(ngModel)]="control.elementValue"
+                            theme="dp-material" [ngModelOptions]="{standalone: true}">
+                        </dp-date-picker>
+                    </div>
+                </div>
+
+                <div *ngIf="control.controlType === 16">
+                    <div class="file-field md-form">
+                        <div mdbBtn floating="true" size="md" color="purple" mdbWavesEffect>
+                            <mdb-icon fas icon="cloud-upload-alt" aria-hidden="true"></mdb-icon>
+                            <input id="{{ 'U' + control.elementId }}" type="file" (change)="onUploadImage($event)"
+                                accept="image/jpeg, image/png" mdbFileSelect>
+                        </div>
+                        <div class="file-path-wrapper mt-3">
+                            <input id="{{ 'S' + control.elementId }}" class="file-path" type="text"
+                                [name]="control.elementName" [value]="imageFiles[imageFiles?.length - 1]?.name"
+                                [placeholder]="control.title">
+                        </div>
+                    </div>
+                    <button mdbBtn type="button" color="purple" class="waves-light" size="sm" mdbWavesEffect>ارسال
+                        فایل</button>
+                </div>
+
+                <div *ngIf="control.controlType === 17">
+                    <a [href]="control.elementValue" id="{{ control.elementId }}">{{ control.title }}</a>
+                </div>
+
+                <div *ngIf="control.controlType === 19">
+                    <div class="md-form">
+                        <select id="{{ control.elementId }}" [name]="control.elementName"
+                            class="browser-default custom-select" (change)="selectItemInList($event, control.id)">
+                            <option *ngFor="let item of control.child; let i = index" [disabled]="i === 0"
+                                [selected]="i === 0" [value]="item.title" [(ngModel)]="item.elementValue"
+                                [ngModelOptions]="{standalone: true}" ngDefaultControl>
+                                {{ item.title }}</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>

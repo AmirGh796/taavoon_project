@@ -1,0 +1,305 @@
+<div class="row my-5" *ngIf="loader">
+    <div class="col-12">
+
+        <div class="p-5 my-5 flex-center">
+            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+        </div>
+
+    </div>
+</div>
+
+<div class="full-screen2 pt-5" *ngIf="!loader">
+
+    <header>
+
+        <mdb-card class="br-20 z-depth-3">
+            <div class="bg-banner br-20 text-white text-center py-5 px-4"
+                [ngStyle]="{'background-image': 'url(' + loanPageItems?.banner?.backgroundUrl + ')'}">
+                <div class="py-5">
+                    <h1 class="card-title h2 my-4 py-2 font-weight-bold"
+                        [ngStyle]="{'color': loanPageItems?.banner?.textColor}">
+                        {{ loanPageItems?.banner?.title }}</h1>
+                    <p class="text-center" [ngStyle]="{'color': loanPageItems?.banner?.textColor}">
+                        {{ loanPageItems?.banner?.subTitle }}</p>
+                </div>
+            </div>
+        </mdb-card>
+
+        <div class="navigation-links">
+            <!-- <app-breadcrumbs></app-breadcrumbs> -->
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section class="mt-5 mb-5">
+
+            <h2 class="text-center h2 py-5 font-weight-bold">{{ loanPageItems?.benefitTitle }}</h2>
+
+            <p class="text-center px-5 mb-5 pb-3 lead grey-text wow fadeInDown" data-wow-delay="0.5s">
+                {{ loanPageItems?.benefitDescription }}</p>
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <ng-container *ngFor="let benefit of loanPageItems?.benefits; let i = index">
+                        <ng-container *ngIf="i % 2 === 0">
+                            <div class="row mb-2">
+                                <div class="col-2">
+                                    <mdb-icon fas [icon]="benefit.icon" size="2x"
+                                        [ngStyle]="{'color': benefit.colorIcon}">
+                                    </mdb-icon>
+                                </div>
+                                <div class="col-10 text-start">
+                                    <h5 class="font-weight-bold">{{ benefit.title }}</h5>
+                                    <p class="grey-text">{{ benefit.description }}</p>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </ng-container>
+                </div>
+                <div class="col-md-4 mb-2 center-on-small-only flex-center">
+                    <img [src]="loanPageItems?.benefitImage?.imageUrl" alt="" class="z-depth-0">
+                </div>
+                <div class="col-md-4">
+                    <ng-container *ngFor="let benefit of loanPageItems?.benefits; let i = index">
+                        <ng-container *ngIf="i % 2 !== 0">
+                            <div class="row mb-2">
+                                <div class="col-2">
+                                    <mdb-icon fas [icon]="benefit.icon" size="2x"
+                                        [ngStyle]="{'color': benefit.colorIcon}">
+                                    </mdb-icon>
+                                </div>
+                                <div class="col-10 text-start">
+                                    <h5 class="font-weight-bold">{{ benefit.title }}</h5>
+                                    <p class="grey-text">{{ benefit.description }}</p>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </ng-container>
+                </div>
+
+            </div>
+
+            <!-- <div class="row text-start">
+                <div class="col-lg-7">
+
+                    <div class="row mb-3">
+                        <div class="col-md-1 col-2">
+                            <mdb-icon fas icon="check-circle" size="2x" class="indigo-text"></mdb-icon>
+                        </div>
+                        <div class="col-md-11 col-10">
+                            <h5 class="font-weight-bold mb-3">بازاریابی</h5>
+                            <p class="grey-text">اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به متن های
+                                برخورده اید که با نام لورم ایپسوم شناخته می‌شوند.</p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-1 col-2">
+                            <mdb-icon fas icon="check-circle" size="2x" class="pink-text"></mdb-icon>
+                        </div>
+                        <div class="col-md-11 col-10">
+                            <h5 class="font-weight-bold mb-3">سرگرمی</h5>
+                            <p class="grey-text">اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به متن های
+                                برخورده اید که با نام لورم ایپسوم شناخته می‌شوند.</p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-lg-0 mb-5">
+                        <div class="col-md-1 col-2">
+                            <mdb-icon fas icon="check-circle" size="2x" class="blue-text"></mdb-icon>
+                        </div>
+                        <div class="col-md-11 col-10">
+                            <h5 class="font-weight-bold mb-3">ارتباطات</h5>
+                            <p class="grey-text mb-0">اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به
+                                متن های برخورده اید که با نام لورم ایپسوم شناخته می‌شوند.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-5 image-1 flex-center justify-content-center align-items-center">
+                    <img src="../../assets/images/Icons/Get loam/money-image-1.jpg" alt="Sample project image"
+                        class="img-fluid rounded z-depth-2">
+                </div>
+            </div> -->
+
+        </section>
+
+    </div>
+
+    <div class="container stepper-container jarallax jarallax-custom-section4"
+        [ngStyle]="{'background-image': 'url(' + jarallaxSec4 + ')'}"
+        *ngIf="loanPageItems?.steps && loanPageItems?.steps?.length && loanPageItems?.stepsActivate">
+        <div class="row">
+            <div class="col-12">
+                <section>
+
+                    <h2 class="text-center h1 py-5 font-weight-bold wow fadeInDown" data-wow-delay="0.5s">{{
+                        loanPageItems?.stepsTitle }}</h2>
+
+                    <p class="text-center px-5 mb-5 pb-3 lead grey-text wow fadeInUp" data-wow-delay="0.5s">
+                        {{ loanPageItems?.stepsDescription }}</p>
+
+                    <mdb-stepper id="stepper" #stepper [linear]="true" [vertical]="isVertical">
+
+                        <mdb-step *ngFor="let step of loanPageItems?.steps" [name]="step?.name" [label]="step?.label"
+                            class="step1">
+                            <p class="pl-2 text-center">{{ step?.description }}</p>
+                            <div *ngIf="step.imageUrl && step.imageUrl?.length" class="flex-center step-content">
+                                <img class="step-img" [src]="step.imageUrl" alt="step-image">
+                            </div>
+                            <div *ngIf="step.btnActivate" style="margin-top: 26px;"
+                                class="full-width d-flex flex-center justify-content-center">
+                                <button style="font-weight: 600;" class="center-item mb-4" mdbBtn
+                                    [size]="utilityFunctions.onWindowResize()" type="button" color="blue" rounded="true"
+                                    outline="true" (click)="goToUPanel(step.btnLinkValue, step.linkType, step.btnLink)"
+                                    mdbWavesEffect>
+                                    <mdb-icon fas icon="info-circle"></mdb-icon>
+                                    <span>{{ step.btnTitle }}</span>
+                                </button>
+                            </div>
+                        </mdb-step>
+
+                    </mdb-stepper>
+
+                </section>
+            </div>
+            <!-- <div class="col-12">
+
+                <button class="center-item mb-4" mdbBtn [size]="utilityFunctions.onWindowResize()" type="button"
+                    color="blue" rounded="true" outline="true" mdbWavesEffect>اطلاعات بیشتر</button>
+
+            </div> -->
+        </div>
+    </div>
+
+    <section id="get-loam" class="mt-5 mb-5 p-5">
+
+        <div class="row">
+            <div class="col-12">
+
+                <div class="loam-panel">
+                    <div class="loam-content z-depth-1 overflow-auto">
+                        <div class="loam-title blue-grey-text p-3">
+                            <div
+                                class="loam-subject text-start flex-center justify-content-between align-items-center info-border">
+                                <h5>دریافت کارت خرید</h5>
+                                <!-- <simple-btn [icon]="'question'" [title]="'شرایط خرید'">
+                                </simple-btn> -->
+                            </div>
+                            <hr>
+                            <div class="row p-3 pt-3">
+
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                                    <p class="pr-5">
+                                        <mdb-icon fas icon="hand-holding-usd"></mdb-icon> سود ماهانه :
+                                        <strong>{{ utilityFunctions.moneySeparator(clacMonthlyProfit().toString()) }}
+                                            تومان</strong>
+                                    </p>
+                                </div>
+
+                                <!-- <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                                    <p class="pr-5">
+                                        <mdb-icon fas icon="money-bill-wave"></mdb-icon> مجموع سود :
+                                        <strong>{{ showMoneyOnScreen(clacTotalProfit()) }} تومان</strong>
+                                    </p>
+                                </div> -->
+
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                                    <p class="pr-5">
+                                        <mdb-icon far icon="calendar-alt"></mdb-icon> حداکثر زمان واریز :
+                                        <strong><span>{{ loanPageItems.loanParameters?.maximumPaymentTime }}</span> روز
+                                            دیگر</strong>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <range-bar-money [minInput]="loanPageItems.loanParameters?.minimumLoan"
+                            [maxInput]="loanPageItems.loanParameters?.maximumLoan"
+                            [stepInput]="loanPageItems.loanParameters?.stepLoanChoose"
+                            (resultMoney)="setResultMoney($event)">
+                        </range-bar-money>
+
+                        <h3 class="text-center p-3 font-weight-bold">میزان مبلغ انتخابی :
+                            {{ utilityFunctions.moneySeparator((resultMoney).toString()) }} تومان</h3>
+
+                        <div id="scroll-helper">
+                            <h5>برای مشاهده بیشتر جزییات روی جدول اسکرول افقی کنید</h5>
+                            <div class="sh-animate">
+                                <mdb-icon class="show-hide-helper" fas icon="hand-point-right"></mdb-icon>
+                            </div>
+                        </div>
+
+                        <div class="pr-5 pl-5">
+                            <div class="loam-table">
+
+                                <table class="table" mdbTable hover="true">
+
+                                    <thead>
+                                        <tr>
+                                            <th *ngFor="let header of tableHeader">
+                                                <strong [ngClass]="header.classes">{{ header.label }}</strong>
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr *ngFor="let content of tableContent; let i = index">
+                                            <th scope="row">
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input"
+                                                        id="{{ 'radioBtn' + i }}" [(ngModel)]="radioValue"
+                                                        [value]="content.months" name="radiobtn"
+                                                        (change)="onChange(content.months)" mdbInput>
+                                                    <label class="form-check-label" for="{{ 'radioBtn' + i }}"></label>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <span>{{ content.months }}</span> ماه
+                                            </td>
+                                            <td>
+                                                <mdb-icon fas icon="hand-holding-usd" class="mr-2 grey-text"></mdb-icon>
+                                                {{
+                                                utilityFunctions.moneySeparator(calcMonthlyInstallments(content.months).toString())
+                                                }}
+                                            </td>
+                                            <td>
+                                                <mdb-icon fas icon="money-bill-wave" class="mr-2 grey-text"></mdb-icon>
+                                                {{
+                                                utilityFunctions.moneySeparator(totalPayment(content.months).toString())
+                                                }}
+                                            </td>
+                                            <td>
+                                                <mdb-icon fas icon="star" class="mr-2 grey-text"></mdb-icon>
+                                                {{
+                                                utilityFunctions.moneySeparator(calcWageValue(content.months).toString())
+                                                }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="loam-footer flex-center p-2">
+                            <button mdbBtn type="button" color="primary" rounded="true" outline="true"
+                                [size]="utilityFunctions.onWindowResize()" mdbWavesEffect
+                                (click)="chooseInstallments()">
+                                <mdb-icon far icon="credit-card"></mdb-icon> <strong>خرید کارت</strong>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+</div>

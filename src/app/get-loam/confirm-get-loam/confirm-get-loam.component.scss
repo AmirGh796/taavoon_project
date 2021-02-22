@@ -1,0 +1,30 @@
+.bank-logo {
+  width: 140px;
+  height: 140px;
+}
+
+.bank-logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.logo-banks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bank-logo:hover {
+  cursor: pointer;
+}
+
+.logo-banks .bank-logo {
+  margin-inline-end: 12px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 380px) {
+  .card-item p {
+    font-size: 14px !important;
+    padding: 0px !important;
+  }
+}

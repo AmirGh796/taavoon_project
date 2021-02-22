@@ -1,0 +1,283 @@
+<div class="row my-5" *ngIf="loader">
+    <div class="col-12">
+
+        <div class="p-5 my-5 flex-center">
+            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+        </div>
+
+    </div>
+</div>
+
+<ng-container *ngIf="!loader">
+    <header *ngIf="homePageItems?.slides?.length > 0">
+
+        <slider-show [slidesConfig]="slidesConfig" (slideEventsOut)="goToSlideLinks($event)"></slider-show>
+
+    </header>
+
+    <main class="text-center">
+
+        <div class="view intro jarallax jarallax-custom-section3"
+            [ngStyle]="{'background-image': 'url(' + jarallaxSec3 + ')'}">
+            <div class="container">
+                <div class="row">
+
+                    <section class="screen-wrapper text-center mb-4"
+                        *ngIf="homePageItems?.fetures.length > 0 && homePageItems?.feturesActivate">
+
+                        <h2 class="h1 py-5 font-weight-bold wow fadeInDown" data-wow-delay="0.5s">
+                            {{ homePageItems?.feturesTitle }}</h2>
+                        <p class="px-5 mb-5 pb-3 lead grey-text wow fadeInDown" data-wow-delay="0.5s">
+                            {{ homePageItems?.feturesDescription }}</p>
+
+                        <fetures-show [feturesConfig]="homePageItems.fetures"
+                            (fetureEventsOut)="goToSlideLinks($event)"></fetures-show>
+
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="facilities-container">
+            <div class="container">
+                <div class="row">
+
+                    <section class="screen-wrapper text-center"
+                        *ngIf="homePageItems?.bankFacilitiesItems.length > 0 && homePageItems?.bankFacilitiesActivate">
+
+                        <h2 class="py-5 m-0 font-weight-bold wow fadeInDown" data-wow-delay="0.5s">{{
+                            homePageItems?.bankFacilitiesTitle }}</h2>
+
+                        <p class="px-3 mb-5 pb-3 lead grey-text wow fadeInUp" data-wow-delay="0.5s">{{
+                            homePageItems?.bankFacilitiesDescription }}</p>
+
+                        <div class="col-12">
+
+                            <important-items-show [importantItems]="homePageItems.bankFacilitiesItems"
+                                [routePath]="'/home/bank-facilities'">
+                            </important-items-show>
+
+                        </div>
+
+
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="container">
+            <div class="row">
+    
+                <h3 class="sep-h3"></h3>
+    
+                <section class="my-5">
+                    <h2 class="h1-responsive font-weight-bold text-center my-5 wow fadeInDown" data-wow-delay="0.5s">ثبت
+                        فروشگاه در تعاونی رنتر</h2>
+                    <h5 style="margin-top: -34px; margin-bottom: 44px;" class="wow fadeInUp" data-wow-delay="0.5s">به راحتی
+                        فروشگاه های آنلاینتان را در تعاونی رنتر ثبت کنید !</h5>
+    
+                    <div class="row" style="margin-top: 60px;">
+    
+                        <div class="col-lg-5 wow fadeInRight" data-wow-delay="0.5s">
+    
+                            <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+                                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg"
+                                    alt="Sample image">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+    
+                        </div>
+    
+                        <div class="col-lg-7 wow fadeInLeft" style="text-align: start;" data-wow-delay="0.5s">
+    
+                            <h3 class="font-weight-bold mb-3"><strong>چگونه ثبت کنم ؟</strong></h3>
+                            <p>اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به متن های برخورده اید که با نام
+                                لورم ایپسوم شناخته می‌شوند. لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) متنی ساختگی و
+                                بدون معنی است که برای امتحان فونت و یا پر کردن فضا در یک طراحی گرافیکی و یا صنعت چاپ استفاده
+                                میشود.</p>
+                            <p>اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به متن های برخورده اید که با نام
+                                لورم ایپسوم شناخته می‌شوند. لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) متنی ساختگی و
+                                بدون معنی است</p>
+    
+                            <button class="other-btn float-left" type="button" color="blue" mdbWavesEffect mdbBtn
+                                [routerLink]="['/home/store-registration']">اطلاعات
+                                بیشتر
+                                <mdb-icon fas icon="angle-left" style="margin-inline-start: 6px;"></mdb-icon></button>
+    
+                        </div>
+    
+                    </div>
+                </section>
+    
+            </div>
+        </div> -->
+
+        <!-- <div *ngIf="homePageItems?.commentsActivate" class="view intro jarallax jarallax-custom-section2">
+            <div class="full-bg-img mask rgba-pink-slight">
+                <div class="mask pattern-1 flex-center flex-column">
+                    <h2 class="h1 p-1 py-5 font-weight-bold">{{ homePageItems?.commentsTitle }}</h2>
+
+                    <p class="px-5 mb-5 pb-3 lead grey-text wow fadeInDown" data-wow-delay="0.5s">
+                        {{ homePageItems?.commentsDescription }}</p>
+
+                    <div style="width: 100%;">
+                        <swiper [config]="commentConfig" (indexChange)="onIndexChange($event)">
+                            <div *ngFor="let item of carouselSlides; let i = index"
+                                class="swiper-slide p-2 cursor-pointer wow fadeInUp" data-wow-delay="0.3s">
+
+                                <div class="card-custom-comment flex-center flex-column">
+                                    <div class="flex-center text-light justify-content-start"
+                                        style="width: 100%; padding: 20px; height: 120px;">
+                                        <img class="card-profile-image" src="../assets/images/profile.jpg" alt="">
+                                        <h4 class="text-center">امیر حسین قربانی</h4>
+                                        <p style="margin-top: 60px; margin-inline-start: -160px;">
+                                            <mdb-icon far icon="calendar-alt"></mdb-icon>
+                                            &nbsp;&nbsp;<span>1398.02.15</span>
+                                        </p>
+
+                                    </div>
+                                    <div class="flex-center" style="width: 100%; height: 160px;">
+                                        <p class="text-light">
+                                            <mdb-icon fas icon="quote-right" aria-hidden="true"></mdb-icon>
+                                            &nbsp;&nbsp;اگر
+                                            شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به متن های برخورده
+                                            اید که با نام لورم ایپسوم شناخته می‌شوند. لورم ایپسوم یا طرح‌نما (به
+                                            انگلیسی:
+                                            Lorem ipsum) متنی ساختگی و بدون معنی است که برای امتحان فونت و یا پر کردن
+                                            فضا در
+                                            یک طراحی گرافیکی و یا صنعت چاپ استفاده میشود. <mdb-icon fas
+                                                icon="quote-left" aria-hidden="true"></mdb-icon>&nbsp;&nbsp;
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </swiper>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="container" *ngIf="homePageItems?.cards?.length > 0 && homePageItems?.cardsActivate">
+            <div class="row">
+
+                <section class="text-center pb-3 my-5" style="width: 100%;">
+
+                    <h2 class="h1 py-5 wow fadeInDown" data-wow-delay="0.5s">{{ homePageItems?.cardsTitle }}</h2>
+
+                    <p class="grey-text pb-5 wow fadeInUp" data-wow-delay="0.5s">{{ homePageItems?.cardsDescription }}
+                    </p>
+
+                    <div class="row">
+
+                        <div class="packages-panel col-lg-4 col-md-12 mb-4 wow fadeInRight"
+                            *ngFor="let card of homePageItems?.cards; let i = index"
+                            [ngClass]="{'fadeInRight': i === 0, 'fadeInUp': i === 1, 'fadeInLeft': i === 3}"
+                            data-wow-delay="0.3s">
+
+                            <mdb-card class="silver-pack pricing-card"
+                                [ngStyle]="{'background': card?.headerColor, 'margin-top': i === 0 ? '40px' : i === 1 ? '0px' : '90px', 'color': card?.tHeaderColor}">
+                                <div class="header flex-center">
+                                    <h4 class="option">{{ card?.title }}</h4>
+                                </div>
+
+                                <mdb-card-body class="striped green-striped card-background heading px-5"
+                                    [ngStyle]="{'background-color': card?.bodyColor, 'color': card?.tBodyColor}">
+                                    <h3 class="price-title">10 میلیون تومان</h3>
+                                    <ul>
+                                        <li>
+                                            <p class="mt-1">
+                                                <mdb-icon fas icon="check"></mdb-icon>بدون نیاز به چک یا سفته
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <mdb-icon fas icon="check"></mdb-icon>پرداخت در 12 ماه
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <mdb-icon fas icon="check"></mdb-icon>بالا بردن امتیاز
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <mdb-icon fas icon="check"></mdb-icon>واریز سریع و آنلاین
+                                            </p>
+                                        </li>
+                                    </ul>
+
+                                    <button mdbBtn rounded="true"
+                                        [ngStyle]="{'background-color': card?.buttonColor, 'color': card?.tButtonColor}"
+                                        class="mb-3 mt-3 waves-light" [routerLink]="[card?.link]" mdbWavesEffect>ثبت
+                                        سفارش
+                                    </button>
+                                </mdb-card-body>
+
+                            </mdb-card>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+
+        <div *ngIf="homePageItems?.countersActivate" class="view intro jarallax jarallax-custom-section">
+            <div class="full-bg-img mask rgba-pink-slight">
+
+                <!-- <h2 class="h1 py-5 wow fadeInDown" data-wow-delay="0.5s">{{ homePageItems?.countersTitle }}</h2>
+
+                <p class="grey-text pb-5 wow fadeInUp" data-wow-delay="0.5s">{{ homePageItems?.countersDescription }}
+                </p> -->
+
+                <div class="flex-center flex-wrap justify-content-around" style="width: 100%;">
+
+                    <!-- <div class="mr-40 wow fadeInRight" data-wow-delay="0.3s">
+                        <app-counter [fontSize]="150" [circleColor]="'#FF8800'" [from]="0" [to]="50" [of]="50"
+                            [mode]="'viewport'" [animationTime]="3000">
+                        </app-counter>
+                        <h4 style="margin-top: 20px;">
+                            <mdb-icon fas icon="shopping-cart"></mdb-icon><span>فروشگاه ها</span>
+                        </h4>
+                    </div> -->
+
+                    <div class="mr-40 wow fadeInRight" data-wow-delay="0.3s">
+                        <app-counter [fontSize]="150" [circleColor]="'#007E33'" [from]="0" [to]="260" [of]="260"
+                            [mode]="'viewport'" [animationTime]="3000">
+                        </app-counter>
+                        <h4 style="margin-top: 20px;">
+                            <mdb-icon fas icon="user-alt"></mdb-icon><span>مشتری ها</span>
+                        </h4>
+                    </div>
+
+                    <div class="mr-40 wow fadeInUp" data-wow-delay="0.3s">
+                        <app-counter [fontSize]="150" [circleColor]="'#0d47a1'" [from]="0" [to]="23" [of]="23"
+                            [mode]="'viewport'" [animationTime]="3000">
+                        </app-counter>
+                        <h4 style="margin-top: 20px;">
+                            <mdb-icon fas icon="user-tie"></mdb-icon><span>سرمایه گزاران</span>
+                        </h4>
+                    </div>
+
+                    <div class="mr-40 wow fadeInLeft" data-wow-delay="0.3s">
+                        <app-counter [fontSize]="150" [circleColor]="'#CC0000'" [from]="0" [to]="2604" [of]="2604"
+                            [mode]="'viewport'" [animationTime]="3000">
+                        </app-counter>
+                        <h4 style="margin-top: 20px;">
+                            <mdb-icon fas icon="users"></mdb-icon><span>کاربران</span>
+                        </h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+</ng-container>

@@ -1,0 +1,74 @@
+.main-content {
+  width: 500px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+.modal-header {
+  border: none !important;
+}
+
+mdb-card {
+  transition: all 500ms;
+}
+
+mdb-card:hover {
+  box-shadow: 2px 2px 20px -8px #000000;
+}
+
+.form-dark .font-small {
+  font-size: 0.8rem;
+}
+
+.form-dark [type="radio"] + label,
+.form-dark [type="checkbox"] + label {
+  font-size: 0.8rem;
+}
+
+.form-dark [type="checkbox"] + label:before {
+  top: 2px;
+  width: 15px;
+  height: 15px;
+}
+
+.form-dark .md-form label {
+  color: #fff;
+}
+
+.form-dark input[type="text"]:focus:not([readonly]) {
+  border-bottom: 1px solid #00c851;
+  -webkit-box-shadow: 0 1px 0 0 #00c851;
+  box-shadow: 0 1px 0 0 #00c851;
+}
+
+.form-dark input[type="text"]:focus:not([readonly]) + label {
+  color: #fff;
+}
+
+.form-dark input[type="password"]:focus:not([readonly]) {
+  border-bottom: 1px solid #00c851;
+  -webkit-box-shadow: 0 1px 0 0 #00c851;
+  box-shadow: 0 1px 0 0 #00c851;
+}
+
+.form-dark input[type="password"]:focus:not([readonly]) + label {
+  color: #fff;
+}
+
+.form-dark .modal-header {
+  border-bottom: none;
+}
+
+.dialog-register-card {
+  background-image: url("https://mdbootstrap.com/img/Photos/Others/pricing-table%20(7).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dialog-register-card .modal-header {
+  padding: 0px !important;
+}
+
+.dialog-register-card > div {
+  padding-bottom: 20px !important;
+}

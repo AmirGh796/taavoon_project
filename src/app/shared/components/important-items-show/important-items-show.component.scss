@@ -1,0 +1,88 @@
+// .facilities-item {
+//   width: 100%;
+//   // height: 200px;
+//   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+//   border-radius: 12px;
+//   transition: all 300ms;
+//   background-repeat: no-repeat;
+//   background-size: 100% 100%;
+// }
+
+// .facilities-item h5 {
+//   width: fit-content;
+//   margin-inline-start: auto;
+//   margin-inline-end: auto;
+//   padding-top: 26px;
+//   color: #ffffff;
+//   font-weight: 500;
+// }
+
+// .facilities-item span {
+//   width: fit-content;
+//   margin-inline-start: auto;
+//   margin-inline-end: auto;
+//   display: block;
+//   font-size: 18px;
+//   color: #e2e2e2;
+//   margin-top: 26px;
+// }
+
+// .facilities-item:hover {
+//   cursor: pointer;
+//   transform: translateY(-8px);
+//   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+// }
+
+// .facilities-large {
+//   background-size: 100% 100% !important;
+// }
+
+// .facilities-item {
+//   background-position: center;
+//   background-size: cover;
+// }
+
+// .facilities-item img {
+//   width: 100%;
+//   border-radius: 12px;
+// }
+
+// .discount-badge {
+//   margin-top: 120px !important;
+//   margin-inline-start: 20px !important;
+// }
+
+// .discount-badge span {
+//   margin: 0px !important;
+// }
+
+// .discount-wrapper {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+// }
+
+.show-ex-date {
+  position: absolute;
+  right: 12px;
+  padding-block: 8px;
+  padding-inline: 14px;
+  font-size: 14px;
+  z-index: 100;
+}
+
+mdb-card-body {
+  h4,
+  p {
+    text-align: end;
+  }
+
+  h4 {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+  }
+
+  a {
+    float: left;
+  }
+}

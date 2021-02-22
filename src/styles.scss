@@ -1,0 +1,338 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/animate.css/animate.min.css";
+@import "../node_modules/swiper/css/swiper.min.css";
+@import "../node_modules/ng-uikit-pro-standard/assets/scss/core/colors";
+@import "../node_modules/ng-uikit-pro-standard/assets/scss/core/variables";
+@import "../node_modules/ng-uikit-pro-standard/assets/scss/core/variables-pro";
+@import "../node_modules/ng-uikit-pro-standard/assets/scss/addons-pro/_ecommerce-pro.scss";
+
+@font-face {
+  font-family: AraHala;
+  src: url(./assets/fonts/SH-AraHala.eot?#iefix) format("embedded-opentype"),
+    url(./assets/fonts/SH-AraHala.woff2) format("woff2"),
+    url(./assets/fonts/SHAraHalaBoShesha.woff) format("woff"),
+    url(./assets/fonts/SHAraHalaBoShesha.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Vazir;
+  font-weight: 200;
+  src: local(Vazir Thin), url(./assets/fonts/Vazir-Thin.eot);
+  src: url(./assets/fonts/Vazir-Thin.eot?#iefix) format("embedded-opentype"),
+    url(./assets/fonts/Vazir-Thin.woff2) format("woff2"),
+    url(./assets/fonts/Vazir-Thin.woff) format("woff"),
+    url(./assets/fonts/Vazir-Thin.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Vazir;
+  font-weight: 300;
+  src: local(Vazir Light), url(./assets/fonts/Vazir-Light.eot);
+  src: url(./assets/fonts/Vazir-Light.eot?#iefix) format("embedded-opentype"),
+    url(./assets/fonts/Vazir-Light.woff2) format("woff2"),
+    url(./assets/fonts/Vazir-Light.woff) format("woff"),
+    url(./assets/fonts/Vazir-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Vazir;
+  font-weight: 400;
+  src: local(Vazir Regular), url(./assets/fonts/Vazir.eot);
+  src: url(./assets/fonts/Vazir.eot?#iefix) format("embedded-opentype"),
+    url(./assets/fonts/Vazir.woff2) format("woff2"),
+    url(./assets/fonts/Vazir.woff) format("woff"),
+    url(./assets/fonts/Vazir.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Vazir;
+  font-weight: 500;
+  src: url(./assets/fonts/Vazir-Medium.eot);
+  src: url(./assets/fonts/Vazir-Medium.eot?#iefix) format("embedded-opentype"),
+    url(./assets/fonts/Vazir-Medium.woff2) format("woff2"),
+    url(./assets/fonts/Vazir-Medium.woff) format("woff"),
+    url(./assets/fonts/Vazir-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Vazir-Bold;
+  font-weight: 700;
+  src: url(./assets/fonts/Vazir-Bold.eot);
+  src: url(./assets/fonts/Vazir-Bold.eot?#iefix) format("embedded-opentype"),
+    url(./assets/fonts/Vazir-Bold.woff2) format("woff2"),
+    url(./assets/fonts/Vazir-Bold.woff) format("woff"),
+    url(./assets/fonts/Vazir-Bold.ttf) format("truetype");
+}
+
+body {
+  font-family: Vazir, sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  //background-color: #f7f8fc;
+  background-image: url(./assets/images/Spectrum-Gradient.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // scrollbar-width: 12px;
+  // scrollbar-color: #e4e4e4;
+  // scrollbar-shadow-color: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  // scrollbar-track-color: #4285f4;
+}
+
+* {
+  scrollbar-width: 12px !important;
+  scrollbar-color: #e4e4e4 !important;
+  scrollbar-shadow-color: inset 0 0 6px rgba(0, 0, 0, 0.1) !important;
+  scrollbar-track-color: #4285f4 !important;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.screen-wrapper {
+  width: 96%;
+  display: block;
+  height: auto;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.mt-6 {
+  margin-top: 5rem !important;
+}
+
+.sep-h3 {
+  width: 100%;
+  height: 2px;
+  background-color: #cccccc;
+  margin-top: 50px;
+}
+
+.dashed-bottom-border {
+  border-bottom: dashed 2px #dbdbdb;
+}
+
+.dashed-top-border {
+  border-top: dashed 2px #dbdbdb;
+}
+
+i {
+  margin-inline-end: 8px;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.full-screen2 {
+  width: 100%;
+  height: 100%;
+  padding-top: 80px !important;
+}
+
+.card-item {
+  text-align: start;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+  border-radius: 2px;
+  background-color: #ffffff;
+  padding: 8px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+}
+
+.info-border {
+  border-right: 6px solid #6f60bf;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  padding-inline-start: 18px;
+  padding-inline-end: 18px;
+}
+
+.p-0 {
+  padding: 0px !important;
+}
+
+.mt-6 {
+  margin-top: 6rem !important;
+}
+
+.text-danger-c {
+  color: #cc0000;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 38px;
+  text-align: center;
+}
+
+.alert-info {
+  margin-bottom: 1rem;
+  background-color: #e8e8e8;
+  border-right: 4px solid #6f60bf;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  padding: 0.75rem 1.25rem;
+}
+
+.alert-info p {
+  color: #4a148c !important;
+}
+
+.m-0 {
+  margin: 0px !important;
+}
+
+.menu-item-sep {
+  width: 2px;
+  height: 30px;
+  background-color: #dadada;
+  margin-block-start: auto;
+  margin-block-end: auto;
+  margin-inline-start: 8px;
+  margin-inline-end: 8px;
+}
+
+.discount-mark {
+  position: absolute;
+  top: 14px;
+  left: 6px;
+  z-index: 100;
+  transform: rotate(318deg);
+}
+
+.new-mark {
+  position: absolute;
+  top: 14px;
+  right: 6px;
+  z-index: 100;
+  transform: rotate(40deg);
+}
+
+.discount-price {
+  position: absolute;
+  left: 20px;
+  bottom: 38px;
+  font-size: 12px;
+  color: #cc0000;
+}
+
+.real-price {
+  position: absolute;
+  left: 18px;
+  bottom: 12px;
+  color: #4b515d;
+}
+
+.facilities-item {
+  width: 100%;
+  // height: 200px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: all 300ms;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.facilities-item h5 {
+  width: fit-content;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  padding-top: 26px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.facilities-item span {
+  width: fit-content;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  display: block;
+  font-size: 18px;
+  color: #e2e2e2;
+  margin-top: 26px;
+}
+
+.facilities-item:hover {
+  cursor: pointer;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.facilities-large {
+  background-size: 100% 100% !important;
+}
+
+.facilities-item {
+  background-position: center;
+  background-size: cover;
+}
+
+.facilities-item img {
+  width: 100%;
+  border-radius: 12px;
+  height: 200px;
+}
+
+.discount-badge {
+  margin-top: 120px !important;
+  margin-inline-start: 20px !important;
+}
+
+.discount-badge span {
+  margin: 0px !important;
+}
+
+.discount-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-26 {
+  font-size: 20px !important;
+}
+
+.view-bf-item {
+  width: fit-content;
+  margin-inline-start: auto;
+  margin-top: 20px;
+  padding-inline-end: 60px;
+  padding-inline-start: 24px;
+  padding-block-end: 14px;
+  padding-block-start: 14px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #4b5a67;
+}
+
+.view-bf-item div {
+  width: 100%;
+  display: block;
+}
+
+.view-bf-item span {
+  margin: 0px !important;
+}
+
+.center-item {
+  margin-inline-start: auto !important;
+  margin-inline-end: auto !important;
+}
+
+.hide-element {
+  visibility: hidden;
+}

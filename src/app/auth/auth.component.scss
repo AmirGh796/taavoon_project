@@ -1,0 +1,70 @@
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+section {
+  width: 100%;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+section h1 {
+  text-align: start;
+  font-size: 30px;
+  font-weight: 500;
+  padding-top: 20px;
+  padding-inline-start: 24px;
+  color: #7b0a7b;
+}
+
+.forgat-pass-text {
+  padding-inline-start: 50px;
+  padding-inline-end: 50px;
+  text-align: start;
+}
+
+.forgat-pass-text a {
+  background-color: #e4cc7e;
+  margin-inline-end: 6px;
+  padding-inline-start: 12px;
+  padding-inline-end: 12px;
+  border-radius: 4px;
+}
+
+.alert-info ul {
+  list-style-type: disc;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(199, 199, 199);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: red;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: red;
+}
+
+.forgotpass-title {
+  text-align: start;
+  margin-top: 20px;
+  padding-inline-start: 50px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 0px) and (max-width: 520px) {
+  .btn-group {
+    span {
+      display: none;
+    }
+  }
+}

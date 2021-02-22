@@ -1,0 +1,33 @@
+<div class="row my-5" *ngIf="loader">
+    <div class="col-12">
+
+        <div class="p-5 my-5 flex-center">
+            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+        </div>
+
+    </div>
+</div>
+
+<div class="full-screen2 pt-5" *ngIf="!loader">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="text-start z-depth-2 answers-panel col-12">
+
+                <p *ngIf="!guideItem || !guideItem?.pageContent || !guideItem?.pageContent?.length"
+                    class="text-danger-c py-5 my-5">متاسفانه موردی یافت نشد !</p>
+
+                <div *ngIf="guideItem && guideItem?.pageContent && guideItem?.pageContent?.length"
+                    [innerHTML]="guideItem.pageContent">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

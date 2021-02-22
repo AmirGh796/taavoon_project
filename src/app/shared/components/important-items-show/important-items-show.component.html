@@ -1,0 +1,108 @@
+<!-- <div class="row mb-4 px-5">
+    <div *ngFor="let item of importantItems | slice:0:3; let i=index" class="col-xl-4 col-lg-4 col-md-6 col-sm-6 p-4">
+
+        <div class="facilities-item facilities-mini" *ngIf="item"
+            [ngStyle]="{'background-color': item.backgroundColor, 'height': item.imageUrlThumb ? 'auto' : '200px'}"
+            (click)="openCard(item.itemId)">
+            <img *ngIf="item.imageUrlThumb && item.imageUrlThumb.length" [src]="item.imageUrlThumb" alt="image">
+            <div *ngIf="item.status === 2" class="discount-wrapper">
+                <mdb-badge class="discount-badge" color="red">
+                    {{ item.discount + '% تخفیف' }}
+                </mdb-badge>
+            </div>
+            <ng-container *ngIf="!item.imageUrlThumb || item.imageUrlThumb?.length === 0">
+                <h5>{{ item.title }}</h5>
+                <span>{{ utilityFunctions.moneySeparator(item.price) }} تومان</span>
+            </ng-container>
+            <div *ngIf="!item.imageUrlThumb || item.imageUrlThumb?.length === 0" class="view-bf-item">
+                <div>
+                    <span>ادامه جزییات ...</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-xl-6 col-lg-6 col-md-12 col-12-sm p-4" *ngFor="let item of importantItems | slice:3:5; let i=index">
+
+        <div class="facilities-item facilities-large" *ngIf="item"
+            [ngStyle]="{'background-color': item.backgroundColor, 'height': item.imageUrlThumb ? 'auto' : '300px'}"
+            (click)="openCard(item.itemId)">
+            <img *ngIf="item.imageUrlThumb && item.imageUrlThumb.length" [src]="item.imageUrlThumb" alt="image">
+            <div *ngIf="item.status === 2" class="discount-wrapper">
+                <mdb-badge class="discount-badge" color="red">
+                    {{ item.discount + '% تخفیف' }}
+                </mdb-badge>
+            </div>
+            <ng-container *ngIf="!item.imageUrlThumb || item.imageUrlThumb?.length === 0">
+                <h5>{{ item.title }}</h5>
+                <span>{{ utilityFunctions.moneySeparator(item.price) }} تومان</span>
+            </ng-container>
+            <div *ngIf="!item.imageUrlThumb || item.imageUrlThumb?.length === 0" class="view-bf-item">
+                <div>
+                    <span>ادامه جزییات ...</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 p-4" *ngFor="let item of importantItems | slice:5:8; let i=index">
+
+        <div class="facilities-item facilities-mini" *ngIf="item"
+            [ngStyle]="{'background-color': item.backgroundColor, 'height': item.imageUrlThumb ? 'auto' : '200px'}"
+            (click)="openCard(item.itemId)">
+            <img *ngIf="item.imageUrlThumb && item.imageUrlThumb.length" [src]="item.imageUrlThumb" alt="image">
+            <div *ngIf="item.status === 2" class="discount-wrapper">
+                <mdb-badge class="discount-badge" color="red">
+                    {{ item.discount + '% تخفیف' }}
+                </mdb-badge>
+            </div>
+            <ng-container *ngIf="!item.imageUrlThumb || item.imageUrlThumb?.length === 0">
+                <h5>{{ item.title }}</h5>
+                <span>{{ utilityFunctions.moneySeparator(item.price) }} تومان</span>
+            </ng-container>
+            <div *ngIf="!item.imageUrlThumb || item.imageUrlThumb?.length === 0" class="view-bf-item">
+                <div>
+                    <span>ادامه جزییات ...</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div> -->
+<mdb-carousel [interval]="'0'" [isControls]="true" [noWrap]="false" class="carousel-multi-item multi-animation"
+    [type]="'carousel-multi-item'" [animation]="'slide'" dir="ltr">
+    <mdb-carousel-item *ngFor="let item1 of slides; let i = index">
+        <div class="col-md-4" *ngFor="let item2 of item1; let i = index">
+            <mdb-badge *ngIf="item2.expiredDate && item2.expiredDate?.length" class="show-ex-date" color="red">
+                مدت اعتبار تا {{ item2.expiredDate }}
+            </mdb-badge>
+            <mdb-card class="my-1">
+                <mdb-card-img [src]="item2.imageUrlThumb" alt="Card image cap"></mdb-card-img>
+                <mdb-card-body>
+                    <mdb-card-title>
+                        <h4>{{ item2.title }}</h4>
+                    </mdb-card-title>
+                    <p>{{ item2.description }}</p>
+                    <a mdbBtn color="primary" class="waves-light" size="sm" mdbWavesEffect
+                        (click)="openCard(item2.itemId)">جزییات</a>
+                </mdb-card-body>
+            </mdb-card>
+        </div>
+    </mdb-carousel-item>
+</mdb-carousel>
+
+<div class="row">
+    <div class="col-12">
+
+        <hr>
+
+    </div>
+    <div class="col-12 p-3">
+
+        <button class="center-item" mdbBtn [size]="utilityFunctions.onWindowResize()" type="button" color="secondary"
+            rounded="true" (click)="goToRoutePath()" mdbWavesEffect>مشاهده
+            بیشتر</button>
+
+    </div>
+</div>

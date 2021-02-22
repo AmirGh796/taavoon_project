@@ -1,0 +1,414 @@
+<div class="full-screen2">
+    <div class="container">
+
+        <section class="mt-3">
+
+            <div class="row mt-6 mb-5 flex-center align-items-center justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-12 col-sm-12">
+
+                    <mdb-tabset #staticTabs [buttonClass]="'md-tabs tabs-3 tabs-secondary'" [justified]="true"
+                        [contentClass]="'card'">
+                        <mdb-tab heading="<i class='fas fa-save'></i>ثبت نام در سایت">
+
+                            <form autocomplete="off" (ngSubmit)="onSignUpForm()" [formGroup]="signUpForm">
+                                <div class="row px-4">
+                                    <div class="col-12">
+
+                                        <h1>ثبت نام</h1>
+
+                                    </div>
+                                    <div class="col-12">
+
+                                        <div class="md-form md-outline">
+                                            <input id="firstName" type="text" class="form-control" mdbInput
+                                                name="firstName_signUp" [formControl]="firstName_signUp" maxlength="20"
+                                                length="20" mdbValidate mdbCharCounter>
+                                            <label for="firstName">نام</label>
+                                        </div>
+                                        <div [hidden]="firstName_signUp.valid || firstName_signUp.untouched">
+                                            <div [hidden]="!firstName_signUp.hasError('required')"
+                                                class="text-danger text-center valid-m">
+                                                نام نمیتواند خالی باشد
+                                            </div>
+                                            <div [hidden]="!firstName_signUp.hasError('minLength')"
+                                                class="text-danger text-center valid-m">
+                                                نام نمیتواند کمتر از 3 کاراکتر باشد
+                                            </div>
+                                            <div [hidden]="!firstName_signUp.hasError('maxLength')"
+                                                class="text-danger text-center valid-m">
+                                                نام نمیتواند بیشتر از 20 کاراکتر باشد
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12">
+
+                                        <div class="md-form md-outline">
+                                            <input id="lastName" type="text" class="form-control" mdbInput
+                                                name="lastName_signUp" [formControl]="lastName_signUp" maxlength="30"
+                                                length="30" mdbValidate mdbCharCounter>
+                                            <label for="lastName">نام خانوادگی</label>
+                                        </div>
+                                        <div [hidden]="lastName_signUp.valid || lastName_signUp.untouched">
+                                            <div [hidden]="!lastName_signUp.hasError('required')"
+                                                class="text-danger text-center valid-m">
+                                                نام خانوادگی نمیتواند خالی باشد
+                                            </div>
+                                            <div [hidden]="!lastName_signUp.hasError('minLength')"
+                                                class="text-danger text-center valid-m">
+                                                نام خانوادگی نمیتواند کمتر از 3 کاراکتر باشد
+                                            </div>
+                                            <div [hidden]="!lastName_signUp.hasError('maxLength')"
+                                                class="text-danger text-center valid-m">
+                                                نام خانوادگی نمیتواند بیشتر از 30 کاراکتر باشد
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12">
+
+                                        <div class="md-form md-outline">
+                                            <input id="nationalCode" type="text" class="form-control" mdbInput
+                                                name="nationalCode_signUp" [formControl]="nationalCode_signUp"
+                                                maxlength="10" length="10" mdbValidate mdbCharCounter>
+                                            <label for="nationalCode">کد ملی</label>
+                                        </div>
+                                        <div [hidden]="nationalCode_signUp.valid || nationalCode_signUp.untouched">
+                                            <div [hidden]="!nationalCode_signUp.hasError('required')"
+                                                class="text-danger text-center valid-m">
+                                                کد ملی نمیتواند خالی باشد
+                                            </div>
+                                            <div [hidden]="!nationalCode_signUp.hasError('minLength')"
+                                                class="text-danger text-center valid-m">
+                                                کدملی نمیتواند کمتر از 10 رقم باشد
+                                            </div>
+                                            <div [hidden]="!nationalCode_signUp.hasError('maxLength')"
+                                                class="text-danger text-center valid-m">
+                                                کدملی نمیتواند بیشتر از 10 رقم باشد
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12">
+
+                                        <div class="md-form md-outline">
+                                            <input id="phoneNumberInput" type="text" class="form-control" mdbInput
+                                                name="phoneNumber_signUp" [formControl]="phoneNumber_signUp"
+                                                maxlength="11" length="11" placeholder="09121234567" mdbValidate
+                                                mdbCharCounter
+                                                mdbPopover="لطفا شماره همراه را با اعداد انگلیسی وارد کنید"
+                                                placement="right" mdbPopoverHeader="راهنما" triggers="focus">
+                                            <label for="phoneNumberInput">شماره تلفن همراه</label>
+                                        </div>
+                                        <div [hidden]="phoneNumber_signUp.valid || phoneNumber_signUp.untouched">
+                                            <div [hidden]="!phoneNumber_signUp.hasError('required')"
+                                                class="text-danger text-center valid-m">
+                                                شماره همراه نمیتواند خالی باشد
+                                            </div>
+                                            <div [hidden]="!phoneNumber_signUp.hasError('pattern')"
+                                                class="text-danger text-center valid-m">
+                                                شماره همراه درست نیست
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12">
+
+                                        <div class="md-form md-outline">
+                                            <input type="password" class="form-control" mdbInput minlength="8"
+                                                maxlength="50" length="50" mdbValidate mdbCharCounter
+                                                name="password_signUp" [formControl]="password_signUp" id="savePassword"
+                                                mdbPopover="کلمه عبور باید بیشتر از 8 کاراکتر باشد ." placement="right"
+                                                mdbPopoverHeader="راهنما" triggers="focus">
+                                            <label for="savePassword">کلمه عبور</label>
+                                        </div>
+                                        <div [hidden]="password_signUp.valid || password_signUp.untouched">
+                                            <div [hidden]="!password_signUp.hasError('required')"
+                                                class="text-danger text-center valid-m">
+                                                کلمه عبور نمیتواند خالی باشد
+                                            </div>
+                                            <div [hidden]="!password_signUp.hasError('minLength')"
+                                                class="text-danger text-center valid-m">
+                                                کلمه عبور نمیتواند از 8 کاراکتر کمتر باشد
+                                            </div>
+                                            <div [hidden]="!password_signUp.hasError('maxLength')"
+                                                class="text-danger text-center valid-m">
+                                                کلمه عبور بیش از حد مجاز است
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12">
+
+                                        <div class="md-form md-outline">
+                                            <input type="password" class="form-control" mdbInput minlength="8"
+                                                maxlength="50" length="50" mdbValidate mdbCharCounter
+                                                name="cPassword_signUp" [formControl]="cPassword_signUp"
+                                                id="passwordConfirm">
+                                            <label for="passwordConfirm">تکرار کلمه عبور</label>
+                                        </div>
+                                        <div [hidden]="cPassword_signUp.valid || cPassword_signUp.untouched">
+                                            <div [hidden]="!cPassword_signUp.hasError('required')"
+                                                class="text-danger text-center valid-m">
+                                                کلمه عبور نمیتواند خالی باشد
+                                            </div>
+                                            <div [hidden]="!cPassword_signUp.hasError('minLength')"
+                                                class="text-danger text-center valid-m">
+                                                کلمه عبور نمیتواند از 8 کاراکتر کمتر باشد
+                                            </div>
+                                            <div [hidden]="!cPassword_signUp.hasError('maxLength')"
+                                                class="text-danger text-center valid-m">
+                                                کلمه عبور بیش از حد مجاز است
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12">
+
+                                        <hr>
+
+                                    </div>
+                                    <div class="col-12 flex-center" *ngIf="!loader2">
+
+                                        <button mdbBtn class="mx-auto" type="submit" size="md" color="secondary"
+                                            rounded="true" [disabled]="!signUpForm.valid" mdbWavesEffect>ثبت در
+                                            سایت</button>
+
+                                    </div>
+                                    <div class="col-12" *ngIf="textDanger">
+
+                                        <p class="flex-center p-3 text-danger-c">
+                                            {{ textDangerMessage }}</p>
+
+                                    </div>
+                                    <div class="col-12" *ngIf="loader2">
+
+                                        <div class="p-2 pt-4 flex-center">
+                                            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+
+                        </mdb-tab>
+                        <mdb-tab heading="<i class='fas fa-sign-in-alt'></i>ورود به سایت">
+
+                            <form autocomplete="off" (ngSubmit)="onSignInForm()" [formGroup]="signInForm">
+                                <div class="row px-4">
+                                    <div class="col-12">
+
+                                        <h1>ورود</h1>
+
+                                    </div>
+                                    <div class="col-12">
+
+                                        <div class="md-form md-outline">
+                                            <input id="phoneNumberInputI" type="text" class="form-control" mdbInput
+                                                name="phoneNumber_signIn" [formControl]="phoneNumber_signIn"
+                                                maxlength="11" length="11" placeholder="09121234567" mdbValidate
+                                                mdbCharCounter
+                                                mdbPopover="لطفا شماره همراه را با اعداد انگلیسی وارد کنید"
+                                                placement="right" mdbPopoverHeader="راهنما" triggers="focus">
+                                            <label for="phoneNumberInputI">شماره تلفن همراه</label>
+                                        </div>
+                                        <div [hidden]="phoneNumber_signIn.valid || phoneNumber_signIn.untouched">
+                                            <div [hidden]="!phoneNumber_signIn.hasError('required')"
+                                                class="text-danger text-center valid-m">
+                                                شماره همراه نمیتواند خالی باشد
+                                            </div>
+                                            <div [hidden]="!phoneNumber_signIn.hasError('pattern')"
+                                                class="text-danger text-center valid-m">
+                                                شماره همراه نمیتواند خالی باشد
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12">
+
+                                        <div class="md-form md-outline">
+                                            <input type="password" class="form-control" mdbInput maxlength="50"
+                                                length="50" mdbValidate mdbCharCounter name="password_signIn"
+                                                [formControl]="password_signIn" id="savePasswordI">
+                                            <label for="savePasswordI">کلمه عبور</label>
+                                        </div>
+                                        <div [hidden]="password_signIn.valid || password_signIn.untouched">
+                                            <div [hidden]="!password_signIn.hasError('required')"
+                                                class="text-danger text-center valid-m">
+                                                کلمه عبور نمیتواند خالی باشد
+                                            </div>
+                                            <div [hidden]="!password_signIn.hasError('minLength')"
+                                                class="text-danger text-center valid-m">
+                                                کلمه عبور نمیتواند از 8 کاراکتر کمتر باشد
+                                            </div>
+                                            <div [hidden]="!password_signIn.hasError('maxLength')"
+                                                class="text-danger text-center valid-m">
+                                                کلمه عبور بیش از حد مجاز است
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12">
+
+                                        <hr>
+
+                                    </div>
+                                    <div class="col-12 flex-center" *ngIf="!loader2">
+
+                                        <button mdbBtn class="mx-auto" type="submit" size="md" color="secondary"
+                                            rounded="true" [disabled]="!signInForm.valid" mdbWavesEffect>ورود به
+                                            سایت</button>
+
+                                    </div>
+                                    <div class="col-12" *ngIf="textDanger">
+
+                                        <p class="flex-center p-3 text-danger-c">
+                                            {{ textDangerMessage }}</p>
+
+                                    </div>
+                                    <div class="col-12" *ngIf="loader2">
+
+                                        <div class="p-2 pt-4 flex-center">
+                                            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+
+                        </mdb-tab>
+                        <mdb-tab heading="<i class='fas fa-key'></i>بازیابی کلمه عبور">
+
+                            <form autocomplete="off" (ngSubmit)="onForgotPassword()" [formGroup]="forgotPassForm">
+                                <div class="row px-4">
+                                    <div class="col-12 d-flex p-3 mt-2">
+
+                                        <div dir="ltr" class="btn-group m-auto">
+                                            <label mdbBtn color="purple" rounded="true" [(ngModel)]="radioModel"
+                                                mdbRadio="Left" size="sm" mdbWavesEffect
+                                                [ngModelOptions]="{standalone: true}" (click)="changeSendMode()">
+                                                <span>ارسال از طریق</span> پیامک <mdb-icon fas icon="sms" class="ml-2">
+                                                </mdb-icon>
+                                            </label>
+                                            <label mdbBtn color="purple" rounded="true" [(ngModel)]="radioModel"
+                                                mdbRadio="Right" size="sm" mdbWavesEffect
+                                                [ngModelOptions]="{standalone: true}" (click)="changeSendMode()">
+                                                <span>ارسال از طریق</span> ایمیل <mdb-icon fas icon="at" class="ml-2">
+                                                </mdb-icon>
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div *ngIf="radioModel === 'Left'" class="col-12">
+
+                                        <div class="md-form md-outline" style="width: 100%;">
+                                            <input type="text" id="phonenumberpass" class="form-control" mdbInput
+                                                name="phonenumber_forgotPass" [formControl]="phonenumber_forgotPass"
+                                                maxlength="11" length="11" placeholder="09121234567" mdbValidate
+                                                mdbCharCounter
+                                                mdbPopover="لطفا شماره همراه را با اعداد انگلیسی وارد کنید ، همینطور از شماره همراهی استفاده کنید که با آن ثبت نام کردید ."
+                                                placement="right" mdbPopoverHeader="راهنما" triggers="focus">
+                                            <label for="phonenumberpass">تلفن همراه</label>
+                                        </div>
+                                        <div
+                                            [hidden]="phonenumber_forgotPass.valid || phonenumber_forgotPass.untouched">
+                                            <div [hidden]="!phonenumber_forgotPass.hasError('required')"
+                                                class="text-danger text-center valid-m">
+                                                شماره تلفن نمیتواند خالی باشد
+                                            </div>
+                                            <div [hidden]="!phonenumber_forgotPass.hasError('pattern')"
+                                                class="text-danger text-center valid-m">
+                                                شماره تلفن نا معتبر است
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div *ngIf="radioModel === 'Right'" class="col-12">
+
+                                        <div class="md-form md-outline" style="width: 100%;">
+                                            <input type="text" id="emailpass" class="form-control" mdbInput
+                                                name="email_forgotPass" [formControl]="email_forgotPass"
+                                                placeholder="example@info.com" maxlength="50" length="50" mdbValidate
+                                                mdbPopover="در صورتی که پیشتر آدرس ایمیل خود را در پنل کاربری ثبت و احراز نموده اید ، امکان بازیابی کلمه عبور را از طریق ایمیل خواهید داشت ."
+                                                placement="right" mdbPopoverHeader="راهنما" triggers="focus">
+                                            <label for="emailpass">ایمیل</label>
+                                        </div>
+                                        <div [hidden]="email_forgotPass.valid || email_forgotPass.untouched">
+                                            <div [hidden]="!email_forgotPass.hasError('required')"
+                                                class="text-danger text-center valid-m">
+                                                ایمیل نمیتواند خالی باشد
+                                            </div>
+                                            <div [hidden]="!email_forgotPass.hasError('pattern')"
+                                                class="text-danger text-center valid-m">
+                                                ایمیل نا معتبر است
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12">
+
+                                        <hr>
+
+                                    </div>
+                                    <div class="col-12 flex-center" *ngIf="!loader2">
+
+                                        <button mdbBtn class="mx-auto" type="submit" size="md" color="secondary"
+                                            rounded="true" [disabled]="!forgotPassForm.valid" mdbWavesEffect>ارسال کلمه
+                                            عبور</button>
+
+                                    </div>
+                                    <div class="col-12"
+                                        *ngIf="forgotPassSuccessText && sendForgotPassLink === 1 && !loader2">
+
+                                        <p class="flex-center p-3 text-success">
+                                            {{ forgotPassSuccessText }}</p>
+
+                                    </div>
+                                    <div class="col-12"
+                                        *ngIf="forgotPassErrorText && sendForgotPassLink === -1 && !loader2">
+
+                                        <p class="flex-center p-3 text-danger-c">
+                                            {{ forgotPassErrorText }}</p>
+
+                                    </div>
+                                    <div class="col-12" *ngIf="loader2">
+
+                                        <div class="p-2 pt-4 flex-center">
+                                            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+
+                        </mdb-tab>
+                    </mdb-tabset>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+</div>
+
+<div mdbModal #frame="mdbModal" class="modal fade bottom modal-scrolling" id="frameModalTop" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true" [config]="{backdrop: false, ignoreBackdropClick: true}">
+    <div class="modal-dialog modal-frame modal-bottom modal-notify modal-info" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row d-flex justify-content-center align-items-center">
+
+                    <p class="pt-3 ml-4">اطلاعات شما برای ورود به سایت به کوکی های مرورگرتان اضافه شد</p>
+
+                    <a type="button" mdbBtn color="primary" class="waves-light" mdbWavesEffect>
+                        <mdb-icon fas icon="book" class="ml-1" (click)="openCoockies();frame.hide()"></mdb-icon> بیشتر
+                        بدانید
+                    </a>
+                    <a type="button" mdbBtn color="primary" outline="true" class="waves-light" mdbWavesEffect
+                        data-dismiss="modal" (click)="frame.hide()">مشکلی نیست</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

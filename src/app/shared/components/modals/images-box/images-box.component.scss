@@ -1,0 +1,44 @@
+.modal-header {
+  background-color: #c611e6 !important;
+}
+
+.modal-header span {
+  color: #ffffff;
+}
+
+.file-field {
+  width: 96% !important;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.modal-body p {
+  padding: 10px;
+}
+
+.image-view {
+  width: 100%;
+  border: #c1c1c1 solid 4px;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.thumbs-panel {
+  max-height: 280px;
+  overflow: auto;
+}
+
+.thumbs-panel img {
+  width: 110px;
+  margin: 8px;
+  border: #c1c1c1 solid 2px;
+  border-radius: 4px;
+}
+
+.thumbs-panel img:hover {
+  cursor: pointer;
+}

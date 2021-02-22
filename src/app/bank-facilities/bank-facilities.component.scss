@@ -1,0 +1,28 @@
+header {
+  width: 90%;
+  margin-top: 80px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+.br-20 {
+  border-radius: 20px !important;
+}
+
+.bg-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section {
+  padding-inline-start: 40px;
+  padding-inline-end: 40px;
+}
+
+.show-ex-date {
+  position: absolute;
+  padding-block: 8px;
+  padding-inline: 14px;
+  font-size: 14px;
+  z-index: 100;
+}

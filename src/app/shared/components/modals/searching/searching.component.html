@@ -1,0 +1,26 @@
+<div class="modal-header">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">×</span>
+    </button>
+    <h4 class="modal-title w-100" id="myModalLabel">جستجوی نام فروشگاه</h4>
+</div>
+<div class="modal-body">
+    <div id="main-content" class="main-content flex-center flex-column justify-content-center">
+
+        <div class="file-field md-form">
+            <input id="name_input" mdbInput type="text" class="form-control" placeholder="جستجو" name="name_input"
+                [(ngModel)]="shoppingName">
+        </div>
+
+        <div *ngIf="!shoppingName" class="file-field md-form">
+            <p class="text-center">فروشگاه مورد نظرتان را جستجو کنید</p>
+        </div>
+
+        <div *ngIf="shoppingName" class="file-field md-form">
+            <p class="text-center text-danger">
+                <mdb-icon fas icon="exclamation-triangle"></mdb-icon>هیچ فروشگاهی یافت نشد
+            </p>
+        </div>
+
+    </div>
+</div>

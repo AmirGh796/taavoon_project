@@ -1,0 +1,21 @@
+<app-navbar [ngClass]="{'hide-element': !httpService.getLoadNavbarData}"></app-navbar>
+
+<ng-container *ngIf="httpService.getLoadNavbarData && httpService.getLoadFooterData">
+    <router-outlet></router-outlet>
+
+    <app-scroll-up></app-scroll-up>
+
+    <live-chat></live-chat>
+
+    <notifications *ngIf="showNotifications">
+    </notifications>
+</ng-container>
+
+<app-footer [ngClass]="{'hide-element': !httpService.getLoadFooterData}"></app-footer>
+
+<div *ngIf="!httpService.getLoadNavbarData && !httpService.getLoadFooterData" class="loading-page">
+    <div class="spinner-grow text-secondary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <p>در حال بارگزاری ...</p>
+</div>

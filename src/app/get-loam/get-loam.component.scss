@@ -1,0 +1,247 @@
+header {
+  width: 90%;
+  margin-top: 80px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+.br-20 {
+  border-radius: 20px !important;
+}
+
+.bg-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-1 {
+  margin-block-end: auto !important;
+  margin-block-start: auto !important;
+}
+
+.loam-panel {
+  margin-top: -22px;
+}
+
+.loam-content {
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.loam-content h3 {
+  color: #800080;
+}
+
+.loam-title {
+  text-align: start;
+  margin-bottom: 30px;
+}
+
+.loam-subject {
+  height: 50px;
+}
+
+.loam-title h5 {
+  font-size: 26px;
+  color: #6f60bf;
+  font-weight: bold;
+}
+
+.loam-title strong {
+  font-weight: bold;
+}
+
+.loam-table {
+  overflow: auto;
+  // scrollbar-width: thin;
+  // scrollbar-color: blue orange;
+}
+
+thead th {
+  border-top: none;
+}
+
+th,
+td {
+  text-align: center !important;
+}
+
+.loam-footer button {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-top: 20px;
+  margin-bottom: 34px;
+}
+
+.loam-table::-webkit-scrollbar {
+  width: 12px;
+  background-color: #e4e4e4;
+}
+
+.loam-table::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #4285f4;
+}
+
+@media screen and (min-width: 0px) and (max-width: 991px) {
+  .loam-panel {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 491px) and (max-width: 768px) {
+  .loam-content h3 {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 490px) {
+  .loam-title h5 {
+    font-size: 22px !important;
+  }
+
+  .loam-content h3 {
+    font-size: 12px !important;
+  }
+}
+
+#toast-container mdb-toast-component {
+  background-color: red !important;
+}
+
+.toast-message {
+  font-size: 14px;
+  margin-top: 8px;
+  padding-inline-start: 12px;
+}
+
+.jarallax-custom-section4 {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.jarallax-custom-section {
+  background-image: url("https://mdbootstrap.com/img/Photos/Others/img%20%2844%29.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 400px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 460px) {
+  .jarallax-custom-section {
+    height: 1120px;
+  }
+}
+
+@media screen and (min-width: 461px) and (max-width: 920px) {
+  .jarallax-custom-section {
+    height: 560px;
+  }
+}
+
+ul.stepper.horizontal .step .step-title::before {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+
+ul.stepper.horizontal .step:nth-of-type(1) .step-title {
+  &:before {
+    content: "\f007";
+  }
+}
+
+ul.stepper.horizontal .step:nth-of-type(2) .step-title {
+  &:before {
+    content: "\f004";
+  }
+}
+
+ul.stepper.horizontal .step:nth-of-type(3) .step-title {
+  &:before {
+    content: "\f005";
+  }
+}
+
+.stepper-custom-card {
+  width: 100%;
+}
+
+.stepper-container {
+  width: 100% !important;
+  max-width: unset;
+}
+
+.stepper-container section {
+  width: 100%;
+}
+
+.step-content {
+  width: 100%;
+  display: block;
+
+  img {
+    padding: 20px;
+  }
+}
+
+.more-button-stepper {
+  margin-top: 0px !important;
+  float: left;
+  margin-inline-end: 80px;
+  margin-bottom: 20px;
+}
+
+#scroll-helper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h5 {
+    padding-inline: 12px;
+    text-align: center;
+    font-size: 10px !important;
+    color: #6f60bf;
+    font-weight: 500;
+  }
+
+  .sh-animate {
+    width: 100%;
+    color: #6f60bf;
+    padding: 4px;
+    margin-top: 20px;
+    padding-inline: 10%;
+    opacity: 1;
+    text-shadow: 6px 6px 2px #e0e0e0;
+    .show-hide-helper {
+      -webkit-animation-duration: 4s;
+      animation-duration: 4s;
+      -webkit-animation-iteration-count: 99999;
+      animation-iteration-count: 99999;
+      -webkit-transform-origin: center;
+      transform-origin: center;
+    }
+  }
+}
+
+.show-hide-helper {
+  animation-name: show-hide-helper;
+}
+@keyframes show-hide-helper {
+  // 33% {
+  //   transform: translateY(-20px);
+  // }
+  // 33% {
+  //   transform: translateY(20px);
+  // }
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+@media screen and (min-width: 530px) {
+  #scroll-helper {
+    display: none;
+  }
+}

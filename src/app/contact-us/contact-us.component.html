@@ -1,0 +1,148 @@
+<div class="row my-5" *ngIf="loader">
+    <div class="col-12">
+
+        <div class="p-5 my-5 flex-center">
+            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+        </div>
+
+    </div>
+</div>
+
+<div class="full-screen2 pt-5" *ngIf="!loader">
+
+    <header>
+
+        <mdb-card class="br-20 z-depth-3">
+            <div class="bg-banner br-20 text-white text-center py-5 px-4"
+                [ngStyle]="{'background-image': 'url(' + contactUsPageItems?.banner?.backgroundUrl + ')'}">
+                <div class="py-5">
+                    <h1 class="card-title h2 my-4 py-2 font-weight-bold"
+                        [ngStyle]="{'color': contactUsPageItems?.banner?.textColor}">
+                        {{ contactUsPageItems?.banner?.title }}</h1>
+                    <p class="text-center" [ngStyle]="{'color': contactUsPageItems?.banner?.textColor}">
+                        {{ contactUsPageItems?.banner?.subTitle }}</p>
+                </div>
+            </div>
+        </mdb-card>
+
+        <div class="navigation-links">
+            <!-- <app-breadcrumbs></app-breadcrumbs> -->
+        </div>
+    </header>
+
+    <div class="text-start container">
+
+        <section>
+
+            <div class="row">
+
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+
+                    <div class="form-panel-contact">
+                        <form id="contact-form" (ngSubmit)="onsendMessages()" [formGroup]="contactForm">
+
+                            <div class="md-form md-outline">
+                                <input type="text" id="fullname_input" class="form-control" length="50" mdbCharCounter
+                                    mdbInput name="fullname_contact" [formControl]="fullname_contact">
+                                <label for="fullname_input">نام و نام خانوادگی</label>
+                            </div>
+                            <div [hidden]="fullname_contact.valid || fullname_contact.untouched">
+                                <div [hidden]="!fullname_contact.hasError('required')" class="text-danger valid-m">
+                                    لطفا نام کامل را وارد کنید
+                                </div>
+                                <div [hidden]="!fullname_contact.hasError('minlength')" class="text-danger valid-m">
+                                    نام وارد شده کمتر از 3 کاراکتر است
+                                </div>
+                                <div [hidden]="!fullname_contact.hasError('maxlength')" class="text-danger valid-m">
+                                    نام وارد شده بیشتر از تعداد مجاز است
+                                </div>
+                                <div [hidden]="!fullname_contact.hasError('pattern')" class="text-danger valid-m">
+                                    لطفا نام خود را به فارسی تایپ کنید
+                                </div>
+                            </div>
+
+                            <div class="md-form md-outline">
+                                <input type="email" id="email_input" class="form-control" mdbInput name="email_contact"
+                                    [formControl]="email_contact">
+                                <label for="email_input">ایمیل</label>
+                            </div>
+                            <div [hidden]="email_contact.valid || email_contact.untouched">
+                                <div [hidden]="!email_contact.hasError('required')" class="text-danger valid-m">
+                                    لطفا ایمیلتان را وارد کنید
+                                </div>
+                                <div [hidden]="!email_contact.hasError('pattern')" class="text-danger valid-m">
+                                    لطفا ایمیل صحیح وارد کنید
+                                </div>
+                            </div>
+
+                            <div class="md-form md-outline">
+                                <textarea type="text" id="form7" class="md-textarea form-control" mdbInput
+                                    [formControl]="message_contact" rows="4"></textarea>
+                                <label for="form7">پیام</label>
+                            </div>
+                            <div [hidden]="message_contact.valid || message_contact.untouched">
+                                <div [hidden]="!message_contact.hasError('required')" class="text-danger valid-m">
+                                    لطفا پیام خود را بنویسید
+                                </div>
+                            </div>
+
+                            <button type="submit" mdbBtn color="primary" [disabled]="!contactForm.valid"
+                                mdbWavesEffect>ارسال پیام</button>
+
+                            <div class="row" *ngIf="loader2">
+                                <div class="col-12">
+
+                                    <div class="p-2 flex-center">
+                                        <mdb-spinner spinnerColor="blue"></mdb-spinner>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row" *ngIf="showSuccessText">
+                                <div class="col-12">
+
+                                    <p class="font-weight-bold text-success text-center">پیام شما با موفقیت ارسال شد .
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+                <div id="contact-us-items" class="p-4 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+
+                    <h3>{{ titleContactUs?.title }}</h3>
+
+                    <p>{{ titleContactUs?.description }}</p>
+
+                    <mdb-accordion class="text-start" [multiple]="false">
+
+                        <mdb-accordion-item *ngFor="let item of accordionItems">
+                            <mdb-accordion-item-head>
+                                <h5>{{ item?.title }}</h5>
+                            </mdb-accordion-item-head>
+                            <mdb-accordion-item-body>{{ item?.description }}</mdb-accordion-item-body>
+                        </mdb-accordion-item>
+
+                    </mdb-accordion>
+
+                    <ul>
+                        <li *ngFor="let item of linkItems">
+                            <mdb-icon fas [icon]="item?.title"></mdb-icon>
+                            <span>{{ item?.description }}</span>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</div>

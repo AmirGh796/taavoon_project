@@ -1,0 +1,60 @@
+.header-form {
+  padding: 20px;
+}
+
+.header-form h2 {
+  text-align: center;
+  font-weight: 500;
+  color: #552b84;
+}
+
+.header-form p {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  color: #4f417b;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 34px;
+}
+
+.main-form {
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+}
+
+.form-seperator {
+  width: 100%;
+  height: 2px;
+  background-color: #e8e8e8;
+  padding: 0px !important;
+  margin-block-start: 30px;
+  margin-block-end: 14px;
+}
+
+.line-space {
+  width: 100%;
+  height: 10px;
+}
+
+.text-danger {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: -16px;
+}
+
+.description-form {
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #745d8e;
+  line-height: 30px;
+}
+
+.radio-series {
+  padding-block-start: 24px;
+  padding-block-end: 10px;
+  display: flex;
+  justify-content: flex-start;
+}

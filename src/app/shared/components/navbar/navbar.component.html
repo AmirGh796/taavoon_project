@@ -1,0 +1,140 @@
+<nav id="navigationBar">
+    <div class="brandWrapper">
+
+        <div class="logo navbar-brand flex-center">
+            <a [routerLink]="[navigationBar?.brand?.link]">
+                <img [src]="navigationBar?.brand?.icon" class="d-inline-block align-top img-brand wow fadeInDown"
+                    data-wow-delay="1.0s" alt="brand">
+            </a>
+            <mdb-icon fas icon="bars" (click)="openSideBarMenu()"></mdb-icon>
+            <strong class="my-auto pr-3">{{ navigationBar.brand?.name }}</strong>
+        </div>
+
+        <div class="utility-items">
+            <a mdbBtn floating="false" *ngIf="!authService.getIsCreateToken" [size]="utilityFunctions.onWindowResize()"
+                style="background-color: #ad1fc5;" mdbWavesEffect [routerLink]="['/register']">
+                <mdb-icon fas icon="user-circle"></mdb-icon>
+            </a>
+
+            <div *ngIf="authService.getIsCreateToken" class="dropdown" mdbDropdown>
+                <a class="dropdown-toggle waves-light shadow-none" mdbDropdownToggle mdbBtn floating="true"
+                    *ngIf="authService.getIsCreateToken" [size]="utilityFunctions.onWindowResize()" mdbWavesEffect>
+                    <mdb-icon fas icon="ellipsis-v"></mdb-icon>
+                </a>
+
+                <div class="dropdown-menu dropdown-primary">
+                    <button class="dropdown-item" (click)="goToUserPanel()">
+                        پنل کاربری</button>
+                    <div class="divider dropdown-divider"></div>
+                    <button class="dropdown-item" (click)="logout()">
+                        خروج از حساب
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="listsWrapper">
+        <div class="firstListWrp">
+            <ul class="firstList">
+
+                <ng-container *ngFor="let item of navigationBar.items">
+                    <li *ngIf="item.activate && item.itemType === 0" class="nav-item waves-light" mdbWavesEffect>
+                        <a class="nav-link " aria-haspopup="true" aria-expanded="false" [routerLink]="[item.link]">
+                            <mdb-icon *ngIf="item.icon && item.icon?.length" fas [icon]="item.icon"></mdb-icon>
+                            {{ item.name }}
+                        </a>
+                    </li>
+                </ng-container>
+
+            </ul>
+
+            <button *ngIf="!authService.getIsCreateToken" mdbBtn type="button" color="light" size="md" outline="true"
+                [routerLink]="['/register']" mdbWavesEffect>
+                <i class="fas fa-user-circle"></i> ثبت نام - ورود
+            </button>
+
+            <div *ngIf="authService.getIsCreateToken" class="dropdown" mdbDropdown>
+
+                <button mdbDropdownToggle mdbBtn color="light" outline="true" size="sm"
+                    class="dropdown-toggle waves-light" type="button" mdbWavesEffect>
+                    <span class="px-2">{{ authService.getUserAccount()?.FullName }}</span>
+                </button>
+
+                <div class="dropdown-menu dropdown-primary">
+                    <button class="dropdown-item" (click)="goToUserPanel()"><i class="fas fa-user-circle"></i>
+                        پنل
+                        کاربری</button>
+                    <div class="divider dropdown-divider"></div>
+                    <button class="dropdown-item" (click)="logout()">
+                        <mdb-icon fas icon="sign-out-alt"></mdb-icon> خروج از حساب
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <ul class="secondList">
+
+            <ng-container *ngFor="let item of navigationBar.items">
+                <li *ngIf="item.activate && item.itemType === 1" class="nav-item waves-light" mdbWavesEffect>
+                    <a class="nav-link " aria-haspopup="true" aria-expanded="false" [routerLink]="[item.link]">
+                        {{ item.name }}
+                    </a>
+                </li>
+            </ng-container>
+
+        </ul>
+    </div>
+</nav>
+
+<div id="sideNavMask" (click)="closeSideBarMenu()"></div>
+<div id="sideNavbar">
+    <div class="logo navbar-brand flex-center side-nav-bwrp">
+        <a [routerLink]="[navigationBar?.brand?.link]">
+            <img [src]="navigationBar?.brand?.icon" class="d-inline-block align-top img-brand wow fadeInDown"
+                data-wow-delay="1.0s" alt="brand">
+        </a>
+        <mdb-icon fas icon="bars" (click)="openSideBarMenu()"></mdb-icon>
+        <strong class="my-auto pr-3">{{ navigationBar.brand?.name }}</strong>
+    </div>
+
+    <div class="sidenav-menu-wrapper">
+        <h3>منوی اصلی</h3>
+
+        <div class="sep-sidenav"></div>
+
+        <ul>
+
+            <ng-container *ngFor="let item of navigationBar.items">
+                <li *ngIf="item.activate && item.itemType === 1" class="nav-item waves-light"
+                    (click)="closeSideBarMenu()" mdbWavesEffect>
+                    <a class="nav-link " aria-haspopup="true" aria-expanded="false" [routerLink]="[item.link]">
+                        {{ item.name }}
+                    </a>
+                </li>
+            </ng-container>
+
+        </ul>
+    </div>
+
+    <div class="sidenav-menu-wrapper second-sidenav-menu">
+        <h3>منوی دسترسی</h3>
+
+        <div class="sep-sidenav"></div>
+
+        <ul>
+
+            <ng-container *ngFor="let item of navigationBar.items">
+                <li *ngIf="item.activate && item.itemType === 0" class="nav-item waves-light"
+                    (click)="closeSideBarMenu()" mdbWavesEffect>
+                    <a class="nav-link " aria-haspopup="true" aria-expanded="false" [routerLink]="[item.link]">
+                        <mdb-icon *ngIf="item.icon && item.icon?.length" fas [icon]="item.icon"></mdb-icon>
+                        {{ item.name }}
+                    </a>
+                </li>
+            </ng-container>
+
+        </ul>
+    </div>
+</div>

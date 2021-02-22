@@ -1,0 +1,20 @@
+<div mdbModal #frame="mdbModal" class="modal fade bottom modal-scrolling" id="frameModalTop" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true" [config]="{backdrop: false, ignoreBackdropClick: true}">
+    <div class="modal-dialog modal-frame modal-bottom modal-notify modal-info" role="document">
+
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row d-flex justify-content-center align-items-center">
+
+                    <p class="pt-3 pr-2">We use cookies to improve your website experience</p>
+
+                    <a type="button" mdbBtn color="primary" class="waves-light" mdbWavesEffect>Learn more
+                        <mdb-icon fas icon="book" class="ml-1"></mdb-icon>
+                    </a>
+                    <a type="button" mdbBtn color="primary" outline="true" class="waves-light" mdbWavesEffect
+                        data-dismiss="modal" (click)="frame.hide()">Ok, thanks</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

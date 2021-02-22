@@ -1,0 +1,172 @@
+<div class="row my-5" *ngIf="loader">
+    <div class="col-12">
+
+        <div class="p-5 my-5 flex-center">
+            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+        </div>
+
+    </div>
+</div>
+
+<div class="full-screen2 pt-5" *ngIf="!loader">
+
+    <div class="container mt-6 mb-3">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="card-item p-4">
+                    <div *ngIf="userConfirmForm !== null && userConfirmForm !== undefined" class="row">
+
+                        <div class="col-12">
+                            <div class="full-width flex-center justify-content-between align-items-center">
+                                <p class="m-0 font-weight-bold text-primary text-start pr-5">فرم تاییدیه نهایی برای
+                                    دریافت
+                                    وام</p>
+
+                                <simple-btn [icon]="'print'" [title]="'پرینت از فرم'">
+                                </simple-btn>
+                            </div>
+
+                            <hr>
+                        </div>
+
+                        <div class="col-12">
+                            <form (ngSubmit)="onConfirmForm()" [formGroup]="confirmForm">
+                                <div class="row mt-5">
+                                    <div class="col-xl-4 col-lg-4 col-md-6">
+
+                                        <div class="md-form md-outline">
+                                            <input id="userid" mdbInput readonly type="text" name="userid_cf"
+                                                [formControl]="userid_cf" class="form-control" placeholder="شناسه کامل">
+                                            <label for="userid">شناسه کامل</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6">
+
+                                        <div class="md-form md-outline">
+                                            <input id="fullname" mdbInput readonly type="text" name="fullname_cf"
+                                                [formControl]="fullname_cf" class="form-control"
+                                                placeholder="نام و نام خانوادگی">
+                                            <label for="fullname">نام و نام خانوادگی</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6">
+
+                                        <div class="md-form md-outline">
+                                            <input id="nationalcode" mdbInput readonly type="text"
+                                                name="nationalcode_cf" [formControl]="nationalcode_cf"
+                                                class="form-control" placeholder="شماره ملی">
+                                            <label for="nationalcode">شماره ملی</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6">
+
+                                        <div class="md-form md-outline">
+                                            <input id="phonenumber" mdbInput readonly type="text" name="phonenumber_cf"
+                                                [formControl]="phonenumber_cf" class="form-control"
+                                                placeholder="تلفن همراه">
+                                            <label for="phonenumber">تلفن همراه</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xl-8 col-lg-8 col-md-12">
+
+                                        <div class="md-form md-outline">
+                                            <input id="shabanumber" mdbInput readonly type="text" name="shabanumber_cf"
+                                                [formControl]="shabanumber_cf" class="form-control"
+                                                placeholder="شماره شبا">
+                                            <label for="shabanumber">شماره شبا</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+
+                                        <div class="md-form md-outline">
+                                            <input id="requestedamount" mdbInput readonly type="text"
+                                                name="requestedamount_cf" [formControl]="requestedamount_cf"
+                                                class="form-control" placeholder="مبلغ سفارشی">
+                                            <label for="requestedamount">مبلغ سفارشی</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+
+                                        <div class="md-form md-outline">
+                                            <input id="months" mdbInput readonly type="text" name="months_cf"
+                                                [formControl]="months_cf" class="form-control" placeholder="مدت زمان">
+                                            <label for="months">مدت زمان</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xl-12">
+
+                                        <div class="md-form md-outline">
+                                            <textarea id="address" mdbInput readonly class="form-control"
+                                                name="address_cf" [formControl]="address_cf" rows="4"
+                                                placeholder="محل سکونت"></textarea>
+                                            <label for="address">محل سکونت</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+
+                                        <div class="alert alert-warning text-start" role="alert">
+                                            <b class="font-weight-bold">توجه !</b> لطفا قبل از تایید فرم ارسالی و
+                                            درخواست کارت خرید ، حتما بخش قوانین
+                                            مربوطه را از قسمت راهنما و سوالات در سایت کامل بخوانید
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 flex-center justify-content-center">
+
+                                        <div class="md-form">
+                                            <mdb-checkbox [formControl]="confrimallrules_cf">تمامی موارد مربوط به قوانین
+                                                را خوانده و قبول میکنم
+                                            </mdb-checkbox>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <hr>
+
+                                        <div class="full-width flex-center justify-content-between">
+                                            <button mdbBtn type="submit" color="success" rounded="true" outline="true"
+                                                mdbWavesEffect [size]="utilityFunctions.onWindowResize()">
+                                                <mdb-icon fas icon="check"></mdb-icon><strong>تایید و
+                                                    دریافت</strong>
+                                            </button>
+                                            <button mdbBtn type="button" color="danger" rounded="true" outline="true"
+                                                mdbWavesEffect [size]="utilityFunctions.onWindowResize()"
+                                                (click)="cancelOperation(true)">
+                                                <mdb-icon fas icon="ban"></mdb-icon><strong>لغو و برگشت</strong>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12" *ngIf="loader2">
+
+                                        <div class="p-2 flex-center">
+                                            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

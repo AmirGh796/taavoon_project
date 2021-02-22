@@ -1,0 +1,68 @@
+<div class="modal-body">
+    <div class="flex-center flex-column justify-content-center">
+
+        <mdb-tabset [buttonClass]="'nav md-pills pills-secondary mb-2'" [justified]="true" [contentClass]="'card'">
+
+            <mdb-tab heading="تصاویر کالا">
+                <div class="row">
+                    <div class="col-12">
+
+                        <div *ngIf="images !== null && images.length > 0">
+                            <div class="row">
+                                <div class="col-7">
+
+                                    <img class="image-view" [src]="mainImage" alt="image">
+
+                                </div>
+                                <div class="col-5">
+
+                                    <h6 class="text-start">{{ title }}</h6>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-12 thumbs-panel">
+
+                                            <img *ngFor="let item of images" [src]="item.image"
+                                                (click)="setImageToView(item.image)" alt="image">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </mdb-tab>
+
+            <mdb-tab heading="ویدیو های کالا">
+                <div class="row">
+                    <div class="col-12">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta
+                            doloribus
+                            reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora,
+                            placeat ratione
+                            porro voluptate odit minima.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta
+                            doloribus
+                            reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora,
+                            placeat ratione
+                            porro voluptate odit minima.</p>
+                    </div>
+                </div>
+            </mdb-tab>
+
+            <mdb-tab heading="دیگر نمایه ها">
+                <div class="row">
+                    <div class="col-12">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta
+                            doloribus
+                            reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora,
+                            placeat ratione
+                            porro voluptate odit minima.</p>
+                    </div>
+                </div>
+            </mdb-tab>
+
+        </mdb-tabset>
+    </div>
+</div>

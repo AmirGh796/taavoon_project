@@ -1,0 +1,99 @@
+<div class="row my-5" *ngIf="loader">
+    <div class="col-12">
+
+        <div class="p-5 my-5 flex-center">
+            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+        </div>
+
+    </div>
+</div>
+
+<div class="full-screen2 pt-5" *ngIf="!loader">
+
+    <header>
+
+        <mdb-card class="br-20 z-depth-3">
+            <div class="bg-banner br-20 text-white text-center py-5 px-4"
+                [ngStyle]="{'background-image': 'url(' + bankFacilitiesPage?.banner?.backgroundUrl + ')'}">
+                <div class="py-5">
+                    <h1 class="card-title h2 my-4 py-2 font-weight-bold"
+                        [ngStyle]="{'color': bankFacilitiesPage?.banner?.textColor}">
+                        {{ bankFacilitiesPage?.banner?.title }}</h1>
+                    <p class="text-center" [ngStyle]="{'color': bankFacilitiesPage?.banner?.textColor}">
+                        {{ bankFacilitiesPage?.banner?.subTitle }}</p>
+                </div>
+            </div>
+        </mdb-card>
+
+        <div class="navigation-links">
+            <!-- <app-breadcrumbs></app-breadcrumbs> -->
+        </div>
+    </header>
+
+    <section class="text-start">
+
+        <div class="row my-5">
+            <div class="col-12">
+
+                <mdb-tabset #categoryTab [buttonClass]="'md-tabs tabs-secondary tabs-3'" [contentClass]="'card'">
+
+                    <mdb-tab *ngFor="let category of bankFacilitiesPage?.bfCategories"
+                        (select)="onSwitchCategory(category.value)" [heading]="category.title">
+                        <div class="row">
+                            <div class="col-12">
+                                <br>
+
+                                <div class="p-5 my-5 text-center" *ngIf="loader2">
+                                    <mdb-spinner spinnerColor="blue"></mdb-spinner>
+                                </div>
+
+                                <p class="text-danger-c text-center p-3"
+                                    *ngIf="!loader2 && bankFacilitiesItems?.length === 0">
+                                    هنوز
+                                    هیچ آیتمی به این دسته بندی
+                                    اضافه نشده</p>
+
+                                <div class="row" *ngIf="!loader2 && bankFacilitiesItems?.length > 0">
+                                    <div *ngFor="let item of bankFacilitiesItemsTmp"
+                                        class="col-xl-4 col-lg-4 col-md-6 col-sm-6 p-4">
+                                        <mdb-badge *ngIf="item.expiredDate && item.expiredDate?.length"
+                                            class="show-ex-date" color="red">
+                                            مدت اعتبار تا {{ utilityFunctions.expiredDateShow(item.expiredDate) }}
+                                        </mdb-badge>
+                                        <div class="facilities-item facilities-mini" *ngIf="item"
+                                            [ngStyle]="{'background-color': item.backgroundColor, 'height': item.imageUrlThumb ? 'auto' : '200px'}"
+                                            [routerLink]="['/home/bank-facilities/bank-facilities-details/' + item.itemId]">
+                                            <img *ngIf="item.imageUrlThumb && item.imageUrlThumb.length"
+                                                [src]="item.imageUrlThumb" alt="image">
+                                            <div *ngIf="item.status === 2" class="discount-wrapper">
+                                                <mdb-badge class="discount-badge" color="red">
+                                                    {{ item.discount + '% تخفیف' }}
+                                                </mdb-badge>
+                                            </div>
+                                            <ng-container
+                                                *ngIf="!item.imageUrlThumb || item.imageUrlThumb?.length === 0">
+                                                <h5>{{ item.title }}</h5>
+                                                <span>{{ utilityFunctions.dateConvertToPersian_V2(item.price) }}</span>
+                                            </ng-container>
+                                            <div *ngIf="!item.imageUrlThumb || item.imageUrlThumb?.length === 0"
+                                                class="view-bf-item">
+                                                <div>
+                                                    <span>ادامه جزییات ...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </mdb-tab>
+
+                </mdb-tabset>
+
+            </div>
+        </div>
+
+    </section>
+</div>

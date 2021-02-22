@@ -1,0 +1,129 @@
+.page-title {
+  margin-top: 86px;
+  margin-bottom: 40px;
+  padding: 30px;
+  color: #9c27b0;
+}
+
+.page-title h3 {
+  font-size: 16px !important;
+  font-weight: 500;
+  margin: 0px !important;
+}
+
+.chip {
+  margin: 0px !important;
+  margin-inline-start: auto !important;
+}
+
+.m-c-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.m-c-panel {
+  width: 252px !important;
+}
+
+.m-c-panel h6 {
+  padding: 6px;
+}
+
+.m-c-panel hr {
+  margin-top: 6px !important;
+}
+
+mdb-accordion-item ul {
+  padding-right: 10px !important;
+}
+
+mdb-accordion-item a {
+  display: block;
+  transition: all 300ms;
+}
+
+mdb-accordion-item a:hover {
+  color: #5c9de2;
+  padding-inline-start: 8px;
+}
+
+mdb-accordion-item mdb-badge {
+  font-size: 10px !important;
+  margin-inline-end: 6px;
+}
+
+.main-slide {
+  height: 340px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-slide-title {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.main-slider-btn {
+  margin-top: 5.5rem;
+  margin-inline-start: 100px;
+}
+
+.sticky {
+  position: sticky;
+  top: 4rem;
+}
+
+.carousel-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+mdb-card {
+  width: 240px;
+}
+
+.viewer {
+  position: absolute;
+  left: 18px;
+  color: #3f729b;
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+mdb-card-body h5 {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  margin-bottom: 14px;
+  text-align: start;
+}
+
+mdb-card-title h4 {
+  font-size: 14px !important;
+  text-align: start;
+}
+
+mdb-card-body .rating {
+  font-size: 10px;
+  position: absolute;
+  left: 4px;
+  margin-top: 2px;
+}
+
+mdb-card-body .rating li mdb-icon i {
+  margin-inline-end: 4px !important;
+}
+
+mdb-card-text p {
+  font-size: 12px !important;
+}
+
+mdb-card-footer {
+  font-size: 14px;
+}
+
+mdb-card-footer mdb-icon {
+  margin-inline-end: 4px !important;
+}

@@ -1,0 +1,193 @@
+<!--Content-->
+<mdb-card class="dialog-register-card modal-content" [ngStyle]="{'margin-top': SignUpFormPanel ? '-34px' : '0px'}">
+    <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+        <div *ngIf="signInFormPanel">
+            <!--Header-->
+            <div class="modal-header text-center pb-4" style="border: none !important;">
+                <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel">
+                    <strong>ورود</strong>
+                    <a class="green-text font-weight-bold">
+                        <strong> کاربر</strong>
+                    </a>
+                </h3>
+                <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close"
+                    (click)="modalRef.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="signin-form" class="form-dark" (ngSubmit)="signIn()" [formGroup]="signInForm">
+                <!--Body-->
+                <div class="modal-body">
+                    <!--Body-->
+                    <div class="md-form mb-5">
+                        <input type="text" id="i-phonenumber" class="form-control white-text" mdbValidate mdbInput
+                            [formControl]="i_phonenumber">
+                        <label for="i-phonenumber">شماره تلفن همراه یا ایمیل</label>
+                    </div>
+
+                    <div class="md-form pb-3">
+                        <input type="password" id="i-password" class="form-control white-text" mdbValidate mdbInput
+                            [formControl]="i_password">
+                        <label for="i-password">کلمه عبور</label>
+                    </div>
+
+                    <!--Grid row-->
+                    <div class="row d-flex align-items-center mb-4">
+
+                        <!--Grid column-->
+                        <div class="text-center mb-3 col-md-12">
+                            <button type="submit" mdbBtn color="success" block="true" [disabled]="!signInForm.valid"
+                                rounded="true" class="z-depth-1 waves-light" mdbWavesEffect>ورود
+                            </button>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+                            <p class="font-small white-text text-center" style="margin-top: -24px;">کلمه عبور را
+                                فراموش
+                                کردید ؟
+                                <a class="green-text ml-1 font-weight-bold" (click)="changeForgotPass()"> اینجا وارد
+                                    شوید</a>
+                            </p>
+                            <button mdbBtn type="button" color="success" outline="true" mdbWavesEffect
+                                (click)="changeRegister()"><strong>ثبت
+                                    نام</strong></button>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                </div>
+            </form>
+        </div>
+        <div *ngIf="SignUpFormPanel">
+            <!--Header-->
+            <div class="modal-header text-center pb-4" style="border: none !important;">
+                <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel">
+                    <strong>ثبت نام </strong>
+                    <a class="green-text font-weight-bold">
+                        <strong> کاربر</strong>
+                    </a>
+                </h3>
+                <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close"
+                    (click)="modalRef.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="signup-form" class="form-dark" (ngSubmit)="signUp()" [formGroup]="signUPForm">
+                <!--Body-->
+                <div class="modal-body">
+                    <!--Body-->
+                    <div class="md-form mb-5">
+                        <input type="text" id="u-phonenumber" class="form-control white-text" mdbValidate mdbInput
+                            [formControl]="u_phonenumber">
+                        <label for="u-phonenumber">شماره تلفن همراه</label>
+                    </div>
+
+                    <div class="md-form pb-3">
+                        <input type="password" id="u-password" class="form-control white-text" mdbValidate mdbInput
+                            [formControl]="u_password">
+                        <label for="u-password">کلمه عبور</label>
+                    </div>
+
+                    <div class="md-form pb-3">
+                        <input type="password" id="u-confirmpassword" class="form-control white-text" mdbValidate
+                            mdbInput [formControl]="u_confirmpassword">
+                        <label for="u-confirmpassword">تکرار کلمه عبور</label>
+                    </div>
+
+                    <!--Grid row-->
+                    <div class="row d-flex align-items-center mb-4">
+
+                        <!--Grid column-->
+                        <div class="text-center mb-3 col-md-12">
+                            <button type="submit" mdbBtn color="success" block="true" rounded="true"
+                                class="z-depth-1 waves-light" mdbWavesEffect [disabled]="!signUPForm.valid">ثبت نام
+                            </button>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+                            <button mdbBtn type="button" color="success" outline="true" mdbWavesEffect
+                                (click)="changeRegister()"><strong>ورود</strong></button>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                </div>
+            </form>
+        </div>
+        <div *ngIf="forgotPasswordPanel">
+            <!--Header-->
+            <div class="modal-header text-center pb-4" style="border: none !important;">
+                <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel">
+                    <strong>بازیابی </strong>
+                    <a class="green-text font-weight-bold">
+                        <strong> کلمه عبور</strong>
+                    </a>
+                </h3>
+                <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close"
+                    (click)="modalRef.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="forgotpass-form" class="form-dark" (ngSubmit)="forgotPass()" [formGroup]="forgotPassForm">
+                <!--Body-->
+                <div class="modal-body">
+                    <!--Body-->
+                    <div class="md-form mb-5">
+                        <input type="text" id="f-phonenumber" class="form-control white-text" mdbValidate mdbInput
+                            [formControl]="f_phonenumber">
+                        <label for="f-phonenumber">شماره تلفن همراه یا ایمیل</label>
+                    </div>
+
+                    <!--Grid row-->
+                    <div class="row d-flex align-items-center mb-4">
+
+                        <!--Grid column-->
+                        <div class="text-center mb-3 col-md-12">
+                            <button type="submit" mdbBtn color="success" block="true" rounded="true"
+                                class="z-depth-1 waves-light" mdbWavesEffect [disabled]="!forgotPassForm.valid">ارسال
+                            </button>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+                            <button mdbBtn type="button" color="success" outline="true" mdbWavesEffect
+                                (click)="changeForgotPass()"><strong>ثبت نام</strong></button>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                </div>
+            </form>
+        </div>
+    </div>
+</mdb-card>
+<!--/.Content-->

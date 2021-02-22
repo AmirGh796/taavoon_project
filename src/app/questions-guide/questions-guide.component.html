@@ -1,0 +1,84 @@
+<div class="row my-5" *ngIf="loader">
+    <div class="col-12">
+
+        <div class="p-5 my-5 flex-center">
+            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+        </div>
+
+    </div>
+</div>
+
+<div class="full-screen2 pt-5" *ngIf="!loader">
+
+    <header>
+
+        <mdb-card class="br-20 z-depth-3">
+            <div class="bg-banner br-20 text-white text-center py-5 px-4"
+                [ngStyle]="{'background-image': 'url(' + qusetionPage?.banner?.backgroundUrl + ')'}">
+                <div class="py-5">
+                    <h1 class="card-title h2 my-4 py-2 font-weight-bold"
+                        [ngStyle]="{'color': qusetionPage?.banner?.textColor}">
+                        {{ qusetionPage?.banner?.title }}</h1>
+                    <p class="text-center" [ngStyle]="{'color': qusetionPage?.banner?.textColor}">
+                        {{ qusetionPage?.banner?.subTitle }}</p>
+                </div>
+            </div>
+        </mdb-card>
+
+        <div class="navigation-links">
+            <!-- <app-breadcrumbs></app-breadcrumbs> -->
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section *ngFor="let sectionPage of qusetionPage?.sections">
+
+            <h2 class="text-center h2 py-5">{{ sectionPage?.title }}</h2>
+
+            <p *ngIf="sectionPage?.description && sectionPage?.description?.length"
+                class="text-center px-5 mb-5 pb-3 lead grey-text wow fadeInDown" data-wow-delay="0.5s">
+                {{ sectionPage.description }}</p>
+
+            <div *ngIf="sectionPage?.sectionNumber !== 1">
+
+                <div class="row">
+
+                    <ng-container *ngFor="let sectionItem of qusetionPage?.itemsSection">
+                        <div *ngIf="sectionItem?.forSection === sectionPage?.sectionNumber"
+                            class="item-wrapper col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                            <div class="z-depth-1 item"
+                                [routerLink]="['/home/questions-guide/answers/' + sectionItem?.id]">
+                                <img [src]="sectionItem?.imageIconUrl" alt="item">
+                                <p class="item-title" [ngStyle]="{'color': sectionItem?.colorText}">
+                                    {{ sectionItem?.title }}
+                                </p>
+                                <p class="item-content light-gray">{{ sectionItem?.description }}</p>
+                            </div>
+                        </div>
+                    </ng-container>
+
+                </div>
+
+                <hr>
+
+            </div>
+
+            <div *ngIf="sectionPage?.sectionNumber === 1" class="z-depth-1 accordion-wrapper">
+
+                <mdb-accordion class="text-start" [multiple]="false">
+
+                    <mdb-accordion-item *ngFor="let qAItem of qusetionPage?.qaItems" [collapsed]="true">
+                        <mdb-accordion-item-head>{{ qAItem?.title }}</mdb-accordion-item-head>
+                        <mdb-accordion-item-body>{{ qAItem?.description }}</mdb-accordion-item-body>
+                    </mdb-accordion-item>
+
+                </mdb-accordion>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</div>

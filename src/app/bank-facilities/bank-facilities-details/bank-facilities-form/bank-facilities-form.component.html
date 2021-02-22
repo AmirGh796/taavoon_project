@@ -1,0 +1,58 @@
+<div class="screen-wrapper pt-5">
+    <div class="container">
+        <div class="row my-5" *ngIf="loader">
+            <div class="col-12">
+
+                <div class="p-5 my-5 flex-center">
+                    <mdb-spinner spinnerColor="blue"></mdb-spinner>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row pt-5 mt-5" *ngIf="!loader">
+            <div class="col-12">
+
+                <div class="card-item page-title">
+                    <div class="d-flex justify-content-between align-content-center flex-wrap">
+
+                        <div class="bread-crumbs d-flex justify-content-start align-items-start">
+                            <mdb-icon fas icon="gift" class="icon-26"></mdb-icon>
+                            <h3><a [routerLink]="['/home/bank-facilities']">خدمات</a></h3>
+                            <mdb-icon fas icon="angle-double-left" class="icon-20 mr-1"></mdb-icon>
+                            <h3>
+                                <a [routerLink]="['/home/bank-facilities/bank-facilities-details/' + itemId]">
+                                    {{ formPage?.facilitieCategory?.title }}
+                                </a>
+                            </h3>
+                            <mdb-icon fas icon="angle-double-left" class="icon-20 mr-1"></mdb-icon>
+                            <h3>فرم ثبت نام</h3>
+                        </div>
+                        <div class="chip">
+                            <a [routerLink]="['/home/bank-facilities']">مشاهده خدمات</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row mb-5" *ngIf="!loader">
+            <div class="col-12">
+
+                <div class="card-item">
+
+                    <section>
+
+                        <register-form [FormPage]="formPage?.page" [FormControls]="formPage?.controls"
+                            [IsAuthenticate]="isAuthenticate" (outPutAllData)="receivedFormAllData($event)">
+                        </register-form>
+
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

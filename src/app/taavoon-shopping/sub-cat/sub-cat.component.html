@@ -1,0 +1,1785 @@
+<div class="row pt-5">
+    <div class="col-12 px-5">
+
+        <div class="card-item page-title">
+            <div class="flex-center justify-content-start">
+
+                <mdb-icon fas icon="laptop" class="icon-26">
+                </mdb-icon>
+                <h3>کالای دیجیتال</h3>
+                <mdb-icon fas icon="angle-double-left" class="icon-20 mr-1"></mdb-icon>
+                <h3>گوشی هوشمند</h3>
+                <div class="chip float-left">
+                    برگشت به فروشگاه
+                    <mdb-icon fas icon="angle-left"></mdb-icon>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-3 pr-5 side-cards">
+
+        <div class="row sticky">
+            <div class="col-12">
+
+                <div class="card-item p-0 view overlay zoom">
+                    <img src="https://dkstatics-public.digikala.com/digikala-adservice-banners/1000012825.jpg"
+                        class="img-fluid" alt="zoom">
+                    <div class="mask flex-center waves-effect rgba-black-light waves-light flex-column">
+                        <p class="white-text">یازدید صفحه</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 mt-3">
+
+                <div class="card-item side-panel">
+                    <h6>جستجوی کالا</h6>
+                    <hr>
+                    <form>
+                        <div class="md-form md-outline">
+                            <input type="text" id="inputIconEx1" placeholder="نام کالا مورد نظر" class="form-control"
+                                mdbInput name="search_product">
+                            <label for="inputIconEx1">جستجو</label>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-12 mt-3">
+
+                <div class="card-item side-panel">
+                    <h6>انتخاب برند</h6>
+                    <hr>
+                    <form>
+                        <div class="md-form md-outline">
+                            <input type="text" id="inputIconEx2" placeholder="برند مورد نظر" class="form-control"
+                                mdbInput name="search_brand">
+                            <label for="inputIconEx2">جستجو</label>
+                        </div>
+                    </form>
+                    <div class="full-width p-2 search-brand-card mb-2">
+                        <ul class="list-group list-group-flush p-0">
+                            <li class="list-group-item flex-center justify-content-start align-items-center">
+                                <mdb-checkbox></mdb-checkbox>
+                                <span class="fa-brand">سامسونگ</span>
+                                <span class="en-brand">samsung</span>
+                            </li>
+                            <li class="list-group-item flex-center justify-content-start align-items-center">
+                                <mdb-checkbox></mdb-checkbox>
+                                <span class="fa-brand">اپل</span>
+                                <span class="en-brand">apple</span>
+                            </li>
+                            <li class="list-group-item flex-center justify-content-start align-items-center">
+                                <mdb-checkbox></mdb-checkbox>
+                                <span class="fa-brand">سونی</span>
+                                <span class="en-brand">sony</span>
+                            </li>
+                            <li class="list-group-item flex-center justify-content-start align-items-center">
+                                <mdb-checkbox></mdb-checkbox>
+                                <span class="fa-brand">نوکیا</span>
+                                <span class="en-brand">nokia</span>
+                            </li>
+                            <li class="list-group-item flex-center justify-content-start align-items-center">
+                                <mdb-checkbox></mdb-checkbox>
+                                <span class="fa-brand">بلک بری</span>
+                                <span class="en-brand">black berry</span>
+                            </li>
+                            <li class="list-group-item flex-center justify-content-start align-items-center">
+                                <mdb-checkbox></mdb-checkbox>
+                                <span class="fa-brand">وان پلاس</span>
+                                <span class="en-brand">one plus</span>
+                            </li>
+                            <li class="list-group-item flex-center justify-content-start align-items-center">
+                                <mdb-checkbox></mdb-checkbox>
+                                <span class="fa-brand">سامسونگ</span>
+                                <span class="en-brand">samsung</span>
+                            </li>
+                            <li class="list-group-item flex-center justify-content-start align-items-center">
+                                <mdb-checkbox></mdb-checkbox>
+                                <span class="fa-brand">اپل</span>
+                                <span class="en-brand">apple</span>
+                            </li>
+                            <li class="list-group-item flex-center justify-content-start align-items-center">
+                                <mdb-checkbox></mdb-checkbox>
+                                <span class="fa-brand">سونی</span>
+                                <span class="en-brand">sony</span>
+                            </li>
+                            <li class="list-group-item flex-center justify-content-start align-items-center">
+                                <mdb-checkbox></mdb-checkbox>
+                                <span class="fa-brand">نوکیا</span>
+                                <span class="en-brand">nokia</span>
+                            </li>
+                            <li class="list-group-item flex-center justify-content-start align-items-center">
+                                <mdb-checkbox></mdb-checkbox>
+                                <span class="fa-brand">بلک بری</span>
+                                <span class="en-brand">black berry</span>
+                            </li>
+                            <li class="list-group-item flex-center justify-content-start align-items-center">
+                                <mdb-checkbox></mdb-checkbox>
+                                <span class="fa-brand">وان پلاس</span>
+                                <span class="en-brand">one plus</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 mt-3">
+
+                <div class="card-item side-panel">
+                    <h6>محدوده قیمت</h6>
+                    <hr>
+                    <div class="px-2 py-1">
+
+                        <mdb-multi-range-input dir="ltr" id="multi-range" min="0" max="50000000"
+                            [value]="{first: 0, second: 50000000}">
+                        </mdb-multi-range-input>
+
+                        <div class="flex-center justify-content-between align-items-center">
+                            <span>از 0</span>
+                            <span>تا 50000000</span>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <button mdbBtn type="button" size="sm" color="secondary" mdbWavesEffect>اعمال فیلتر</button>
+                </div>
+
+            </div>
+            <div class="col-12 mt-3">
+
+                <div class="card-item flex-center align-items-center justify-content-start switch-panel">
+                    <div class="switch square">
+                        <label>
+                            <input type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                    <h6>نمایش کالا های موجود</h6>
+                </div>
+
+            </div>
+            <div class="col-12 mt-3">
+
+                <div class="card-item flex-center align-items-center justify-content-start switch-panel">
+                    <div class="switch square">
+                        <label>
+                            <input type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                    <h6>نمایش کالا های با تخفیف</h6>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-9 pl-5">
+
+        <div class="row">
+            <div class="col-12">
+
+                <div class="card-item">
+
+                    <div class="sort-tab full-width flex-center justify-content-start align-items-center p-2">
+                        <mdb-icon fas icon="sort-amount-up"></mdb-icon>
+                        <span>مرتب سازی بر اساس : </span>
+
+                        <div style="font-size: 12px;">
+                            <div class="form-check form-check-inline">
+                                <input type="radio" [checked]="true" class="form-check-input" id="materialInline1"
+                                    name="inlineMaterialRadiosExample" mdbInput>
+                                <label class="form-check-label" for="materialInline1">پربازدید ترین</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="materialInline2"
+                                    name="inlineMaterialRadiosExample" mdbInput>
+                                <label class="form-check-label" for="materialInline2">پرفروش ترین</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="materialInline3"
+                                    name="inlineMaterialRadiosExample" mdbInput>
+                                <label class="form-check-label" for="materialInline3">بهترین</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="materialInline4"
+                                    name="inlineMaterialRadiosExample" mdbInput>
+                                <label class="form-check-label" for="materialInline4">جدیدترین</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="materialInline5"
+                                    name="inlineMaterialRadiosExample" mdbInput>
+                                <label class="form-check-label" for="materialInline5">ارزان ترین</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="materialInline6"
+                                    name="inlineMaterialRadiosExample" mdbInput>
+                                <label class="form-check-label" for="materialInline6">گران ترین</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-12 mt-3">
+
+                <div class="card-item">
+
+                    <div class="row">
+                        <div class="col-4" style="display: flex;">
+
+                            <h6 class="total-products">
+                                تعداد کل کالا ها : <span>236 کالا</span>
+                            </h6>
+
+                        </div>
+                        <div class="col-8">
+
+                            <div dir="ltr" class="number-of-show dropdown" mdbDropdown>
+
+                                <button mdbDropdownToggle mdbBtn color="primary"
+                                    class="float-left dropdown-toggle waves-light" type="button" mdbWavesEffect>
+                                    تعداد محصولات قابل نمایش
+                                </button>
+
+                                <div class="dropdown-menu number-of-show dropdown-primary text-start">
+                                    <a class="dropdown-item active">12 کالا در صفحه</a>
+                                    <a class="dropdown-item">15 کالا در صفحه</a>
+                                    <a class="dropdown-item">18 کالا در صفحه</a>
+                                    <a class="dropdown-item">21 کالا در صفحه</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-12">
+
+                            <hr>
+
+                        </div>
+                        <div class="row p-4 m-0 full-width" style="padding-top: 0px !important;">
+                            <div class="col-4 mt-3" style="height: auto;">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(5).jpg"
+                                            alt="test"></mdb-card-img>
+                                        <a [routerLink]="['/taavoon-shopping/view-product/mobile']">
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>1920
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">کفش مردانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left"
+                                                    style="color: #4B515D;">{{ convertMoney(200000) }}</span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <h4 class="discount-mark">
+                                            <mdb-badge color="pink">50%</mdb-badge>
+                                        </h4>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(4).jpg"
+                                            alt="">
+                                        </mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>2163
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">ست مردانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left discount-price">
+                                                    <del>{{ convertMoney(1400000) }}</del>
+                                                </span>
+                                                <span class="float-left real-price">
+                                                    {{ convertMoney(700000) }}
+                                                </span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/shoes%20(2).jpg"
+                                            alt=""></mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>1574
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">کفش زنانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left"
+                                                    style="color: #4B515D;">{{ convertMoney(430000) }}</span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3" style="height: auto;">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(5).jpg"
+                                            alt="test"></mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>1920
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">کفش مردانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left"
+                                                    style="color: #4B515D;">{{ convertMoney(200000) }}</span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <h4 class="discount-mark">
+                                            <mdb-badge color="pink">50%</mdb-badge>
+                                        </h4>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(4).jpg"
+                                            alt="">
+                                        </mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>2163
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">ست مردانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left discount-price">
+                                                    <del>{{ convertMoney(1400000) }}</del>
+                                                </span>
+                                                <span class="float-left real-price">
+                                                    {{ convertMoney(700000) }}
+                                                </span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/shoes%20(2).jpg"
+                                            alt=""></mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>1574
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">کفش زنانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left"
+                                                    style="color: #4B515D;">{{ convertMoney(430000) }}</span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3" style="height: auto;">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(5).jpg"
+                                            alt="test"></mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>1920
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">کفش مردانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left"
+                                                    style="color: #4B515D;">{{ convertMoney(200000) }}</span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <h4 class="discount-mark">
+                                            <mdb-badge color="pink">50%</mdb-badge>
+                                        </h4>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(4).jpg"
+                                            alt="">
+                                        </mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>2163
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">ست مردانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left discount-price">
+                                                    <del>{{ convertMoney(1400000) }}</del>
+                                                </span>
+                                                <span class="float-left real-price">
+                                                    {{ convertMoney(700000) }}
+                                                </span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/shoes%20(2).jpg"
+                                            alt=""></mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>1574
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">کفش زنانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left"
+                                                    style="color: #4B515D;">{{ convertMoney(430000) }}</span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3" style="height: auto;">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(5).jpg"
+                                            alt="test"></mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>1920
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">کفش مردانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left"
+                                                    style="color: #4B515D;">{{ convertMoney(200000) }}</span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <h4 class="discount-mark">
+                                            <mdb-badge color="pink">50%</mdb-badge>
+                                        </h4>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(4).jpg"
+                                            alt="">
+                                        </mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>2163
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">ست مردانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left discount-price">
+                                                    <del>{{ convertMoney(1400000) }}</del>
+                                                </span>
+                                                <span class="float-left real-price">
+                                                    {{ convertMoney(700000) }}
+                                                </span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/shoes%20(2).jpg"
+                                            alt=""></mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>1574
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">کفش زنانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left"
+                                                    style="color: #4B515D;">{{ convertMoney(430000) }}</span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3" style="height: auto;">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(5).jpg"
+                                            alt="test"></mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>1920
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">کفش مردانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left"
+                                                    style="color: #4B515D;">{{ convertMoney(200000) }}</span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <h4 class="discount-mark">
+                                            <mdb-badge color="pink">50%</mdb-badge>
+                                        </h4>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(4).jpg"
+                                            alt="">
+                                        </mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>2163
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">ست مردانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left discount-price">
+                                                    <del>{{ convertMoney(1400000) }}</del>
+                                                </span>
+                                                <span class="float-left real-price">
+                                                    {{ convertMoney(700000) }}
+                                                </span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/shoes%20(2).jpg"
+                                            alt=""></mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>1574
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">کفش زنانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left"
+                                                    style="color: #4B515D;">{{ convertMoney(430000) }}</span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3" style="height: auto;">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(5).jpg"
+                                            alt="test"></mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>1920
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">کفش مردانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left"
+                                                    style="color: #4B515D;">{{ convertMoney(200000) }}</span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <h4 class="discount-mark">
+                                            <mdb-badge color="pink">50%</mdb-badge>
+                                        </h4>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(4).jpg"
+                                            alt="">
+                                        </mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>2163
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">ست مردانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left discount-price">
+                                                    <del>{{ convertMoney(1400000) }}</del>
+                                                </span>
+                                                <span class="float-left real-price">
+                                                    {{ convertMoney(700000) }}
+                                                </span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                            <div class="col-4 mt-3">
+
+                                <mdb-card cascade="true" narrower="true">
+
+                                    <div class="view view-cascade overlay zoom waves-light" mdbWavesEffect>
+                                        <mdb-card-img class="waves-light"
+                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/shoes%20(2).jpg"
+                                            alt=""></mdb-card-img>
+                                        <a>
+                                            <div class="mask flex-center rgba-black-slight">
+                                                <h6 class="text-white font-weight-bold">بازدید محصول</h6>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <mdb-card-body cascade="true" class="text-center">
+                                        <span class="viewer ">
+                                            <mdb-icon far icon="eye"></mdb-icon>1574
+                                        </span>
+                                        <h5>مد و پوشاک</h5>
+                                        <ul class="rating">
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon fas icon="star"></mdb-icon>
+                                            </li>
+                                            <li>
+                                                <mdb-icon far icon="star"></mdb-icon>
+                                            </li>
+                                        </ul>
+                                        <mdb-card-title>
+                                            <h4 class="card-title"><strong><a href="">کفش زنانه</a></strong></h4>
+                                        </mdb-card-title>
+
+                                        <mdb-card-text class="card-text">نیازهای زمانها و در شرایط خاص و غالباً
+                                            اتفاق می افتد كه لذتها از چیزها برخوردار باشد ، یا از لذت جلوگیری می
+                                            كند.
+                                        </mdb-card-text>
+
+                                        <hr>
+
+                                        <mdb-card-footer class="p-0">
+                                            <div class="clearfix">
+                                                <span class="float-left"
+                                                    style="color: #4B515D;">{{ convertMoney(430000) }}</span>
+                                                <span class="float-right">
+                                                    <a style="color: #0d47a1;">
+                                                        <mdb-icon fas icon="shopping-cart" placement="bottom"
+                                                            floating="true" triggers="hover"
+                                                            [mdbPopover]="'اضافه به لیست'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-placement="top" title="Share"
+                                                        style="color: #4B515D;">
+                                                        <mdb-icon fas icon="share-alt" placement="bottom"
+                                                            floating="true" triggers="hover" [mdbPopover]="'شیر لینک'">
+                                                        </mdb-icon>
+                                                    </a>
+                                                    <a class="active" data-toggle="tooltip" data-placement="top"
+                                                        title="Added to Wishlist" style="color: #CC0000;">
+                                                        <mdb-icon far icon="heart" placement="bottom" floating="true"
+                                                            triggers="hover" [mdbPopover]="'لایک محصول'"></mdb-icon>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </mdb-card-footer>
+
+                                    </mdb-card-body>
+
+                                </mdb-card>
+
+                            </div>
+                        </div>
+                        <div class="col-12">
+
+                            <hr>
+
+                        </div>
+                        <div class="col-12">
+
+                            <div class="flex-center justify-content-center">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination pagination-circle pg-blue">
+                                        <li class="page-item disabled"><a class="page-link" mdbWavesEffect>اولین</a>
+                                        </li>
+                                        <li class="page-item disabled">
+                                            <a class="page-link" aria-label="Previous" mdbWavesEffect>
+                                                <span aria-hidden="true">&laquo;</span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" mdbWavesEffect>1</a></li>
+                                        <li class="page-item"><a class="page-link" mdbWavesEffect>2</a></li>
+                                        <li class="page-item"><a class="page-link" mdbWavesEffect>3</a></li>
+                                        <li class="page-item"><a class="page-link" mdbWavesEffect>4</a></li>
+                                        <li class="page-item"><a class="page-link" mdbWavesEffect>5</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" aria-label="Next" mdbWavesEffect>
+                                                <span aria-hidden="true">&raquo;</span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" mdbWavesEffect>آخرین</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

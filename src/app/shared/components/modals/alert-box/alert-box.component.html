@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">×</span>
+    </button>
+    <h4 class="modal-title w-100" id="myModalLabel">{{ title }}</h4>
+</div>
+<div class="modal-body">
+    <div class="flex-center flex-column justify-content-center">
+        <div class="text-start">
+            <p>{{ description }}</p>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button *ngIf="buttonOperation === 0" type="button" mdbBtn color="secondary" class="waves-light" mdbWavesEffect
+        data-dismiss="modal" (click)="modalRef.hide()">متوجه شدم</button>
+    <button *ngIf="buttonOperation === 1" type="button" mdbBtn color="secondary" class="waves-light" mdbWavesEffect
+        data-dismiss="modal" (click)="goToRegister()">ثبت نام / ورود</button>
+    <button *ngIf="buttonOperation === 2" type="button" mdbBtn color="secondary" class="waves-light" mdbWavesEffect
+        data-dismiss="modal" (click)="goToUserPanel()">پنل کاربری</button>
+    <button *ngIf="buttonOperation === 3" type="button" mdbBtn color="secondary" class="waves-light" mdbWavesEffect
+        data-dismiss="modal" (click)="goToConfirmPhone()">تایید تلفن</button>
+</div>

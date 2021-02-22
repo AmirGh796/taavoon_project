@@ -1,0 +1,65 @@
+.social-f-sec {
+  width: 50%;
+  border-left: #ffffff dashed 2px;
+}
+
+.email-f-sec {
+  width: 50%;
+}
+
+.email-panel-footer {
+  background-color: #ffffff;
+  padding-inline-start: 40px;
+  padding-inline-end: 40px;
+  border-radius: 8px;
+}
+
+.namad-box {
+  width: 100%;
+  padding-bottom: 34px;
+}
+
+.namads {
+  margin-inline-start: 10px;
+}
+
+.namads img {
+  width: 90px;
+  border-radius: 4px;
+  margin-inline-start: 10px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 0px) and (max-width: 991px) {
+  #top-sec-footer {
+    flex-direction: column !important;
+  }
+
+  .social-f-sec {
+    width: 100% !important;
+    border-left: none !important;
+    border-bottom: #ffffff dashed 2px;
+  }
+
+  .email-f-sec {
+    padding-block: 30px;
+  }
+
+  .email-panel-footer {
+    flex-direction: column-reverse !important;
+  }
+
+  .email-f-sec {
+    width: 100% !important;
+  }
+}
+
+h6 {
+  cursor: pointer;
+}
+
+.email-news-title {
+  line-height: 24px;
+  padding: 20px;
+  text-align: start;
+}

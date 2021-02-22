@@ -1,0 +1,829 @@
+<div class="screen-wrapper">
+    <div class="row">
+        <div class="col-12">
+
+            <div class="card-item page-title">
+                <div class="flex-center justify-content-start">
+
+                    <mdb-icon fas icon="laptop" class="icon-26">
+                    </mdb-icon>
+                    <h3>کالای دیجیتال</h3>
+                    <mdb-icon fas icon="angle-double-left" class="icon-20 mr-1"></mdb-icon>
+                    <h3>گوشی هوشمند</h3>
+                    <mdb-icon fas icon="angle-double-left" class="icon-20 mr-1"></mdb-icon>
+                    <h3>سامسونگ galaxy S20 ultra 256 GB</h3>
+                    <div class="chip float-left">
+                        برگشت به فروشگاه
+                        <mdb-icon fas icon="angle-left"></mdb-icon>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12">
+
+            <div class="card-item">
+
+                <div class="row pb-3">
+                    <div class="col-4 p-4">
+
+                        <mdb-carousel #imagesGallery class="carousel slide carousel-fade" [type]="'carousel-thumbnails'"
+                            [animation]="'fade'">
+                            <mdb-carousel-item *ngFor="let item of carouselSlides | slice:0:3; let i=index"
+                                (click)="openImageBox()">
+                                <img class="d-block w-100" [src]="item.image" alt="First slide">
+                            </mdb-carousel-item>
+                        </mdb-carousel>
+
+                    </div>
+                    <div class="col-8">
+
+                        <div class="p-3 title-bar">
+                            <div class="text-start">
+                                <h3>گوشی samsung galaxy s20 ultra با حافظه 512 GB</h3>
+                                <p>samsung galaxy s20 ultra smart phone 512 GB</p>
+                            </div>
+                            <div class="text-start">
+                                <mdb-icon fas icon="check-circle"></mdb-icon>
+                                <span>560 نفر این کالارو پیشنهاد میکنند</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-7">
+
+                                <hr style="margin-top: -14px;">
+                                <div class="p-3 details-panel">
+                                    <div class="rating-panel">
+                                        <ul class="inline-list">
+                                            <li>
+                                                <ul class="rating">
+                                                    <li>
+                                                        <mdb-icon fas icon="star"></mdb-icon>
+                                                    </li>
+                                                    <li>
+                                                        <mdb-icon fas icon="star"></mdb-icon>
+                                                    </li>
+                                                    <li>
+                                                        <mdb-icon fas icon="star"></mdb-icon>
+                                                    </li>
+                                                    <li>
+                                                        <mdb-icon fas icon="star"></mdb-icon>
+                                                    </li>
+                                                    <li>
+                                                        <mdb-icon far icon="star"></mdb-icon>
+                                                    </li>
+                                                </ul>
+                                                <span>4.0 امتیاز</span>
+                                            </li>
+                                            <li>
+                                                <div class="views-product">
+                                                    <span>1920 نفر از این کالا بازدید کردند</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-details">
+                                        <div class="category-panel">
+                                            <ul class="inline-list">
+                                                <li>
+                                                    <span class="font-16">برند : </span>
+                                                    <a class="category-link">سامسونگ</a>
+                                                </li>
+                                                <li style="margin-inline-start: 26px !important;">
+                                                    <span class="font-16">دسته بندی : </span>
+                                                    <a class="category-link">گوشی هوشمند</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-color">
+                                            <h6 class="font-16">رنگ بندی محصول</h6>
+                                            <ul class="inline-list">
+                                                <li>
+                                                    <div class="form-check radio-blue">
+                                                        <input type="radio" class="form-check-input" id="color1"
+                                                            name="colors" [checked]="true" mdbInput>
+                                                        <label class="form-check-label" for="color1">آبی</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check radio-white">
+                                                        <input type="radio" class="form-check-input" id="color2"
+                                                            name="colors" mdbInput>
+                                                        <label class="form-check-label" for="color2">سفید</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check radio-black">
+                                                        <input type="radio" class="form-check-input" id="color3"
+                                                            name="colors" mdbInput>
+                                                        <label class="form-check-label" for="color3">مشکی</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check radio-green">
+                                                        <input type="radio" class="form-check-input" id="color4"
+                                                            name="colors" mdbInput>
+                                                        <label class="form-check-label" for="color4">سبز</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <hr>
+                                        <div class="product-property">
+                                            <h6>ویژگی های اصلی محصول</h6>
+                                            <ul>
+                                                <li *ngFor="let item of propertiesList | slice:0:maxProp; let i=index">
+                                                    <span>{{ item.prop }}</span>
+                                                </li>
+                                            </ul>
+                                            <a (click)="toggleProperties()">
+                                                <mdb-icon fas icon="plus"></mdb-icon>
+                                                موارد بیشتر
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-5 pl-4">
+
+                                <div class="buy-panel z-depth-1">
+                                    <div class="row">
+                                        <div class="col-12 pt-3 px-4">
+
+                                            <h5>
+                                                <mdb-icon fas icon="store-alt"></mdb-icon>
+                                                فروشگاه طرف قرارداد
+                                            </h5>
+                                            <a class="link-store">
+                                                فروشگاه بازار موبایل تهران
+                                                <mdb-icon fas icon="angle-left"></mdb-icon>
+                                            </a>
+
+                                        </div>
+                                        <div class="col-12 px-4">
+                                            <hr>
+                                        </div>
+                                        <div class="col-12 px-4">
+
+                                            <h5>
+                                                <mdb-icon fas icon="clipboard-check"></mdb-icon>
+                                                گارانتی 18 ماهه بازرگانی مهر
+                                            </h5>
+
+                                        </div>
+                                        <div class="col-12 px-4">
+                                            <hr>
+                                        </div>
+                                        <div class="col-12 p-4">
+
+                                            <h2 class="result-price">{{ convertMoney(20500000) }}</h2>
+                                            <button mdbBtn type="button" class="buy-button" color="secondary"
+                                                rounded="true" mdbWavesEffect>
+                                                <span>افزودن به سبد خرید</span>
+                                            </button>
+
+                                        </div>
+                                        <div class="col-12 px-4">
+                                            <hr>
+                                        </div>
+                                        <div class="col-12 px-4">
+
+                                            <a class="link-store" style="font-weight: 500;">تمامی فروشنده های این
+                                                کالا</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-12">
+
+            <div class="card-item">
+                <h5 class="merchants-title-panel">
+                    <mdb-icon fas icon="store-alt"></mdb-icon>
+                    لیست تمامی فروشنده های این محصول
+                </h5>
+                <hr>
+                <table mdbTable>
+                    <thead>
+                        <tr>
+                            <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr mdbTableCol *ngFor="let el of elements"
+                            [ngStyle]="{'background-color': el.activate ? '#ECECEC' : '#FFFFFF'}">
+                            <td class="pt-26">
+                                <a class="link-store2">{{el.merchantName}}</a>
+                            </td>
+                            <td class="pt-26">{{el.rangeToGetProduct}}</td>
+                            <td class="pt-26">
+                                <mdb-icon fas icon="star" style="color: #ffa000 ;"></mdb-icon>
+                                {{el.ratingOperation}}
+                            </td>
+                            <td class="pt-26">{{el.waranty}}</td>
+                            <td class="pt-26">{{el.price}}</td>
+                            <td>
+                                <button mdbBtn type="button" size="sm" color="info" rounded="true" mdbWavesEffect>
+                                    <mdb-icon fas icon="eye"></mdb-icon>
+                                    مشاهده
+                                </button>
+                            </td>
+                            <td>
+                                <button mdbBtn type="button" size="sm" color="secondary" rounded="true" mdbWavesEffect>
+                                    <mdb-icon fas icon="plus"></mdb-icon>
+                                    <span>اضافه</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-12">
+
+            <mdb-tabset #descriptionTabs [buttonClass]="'classic-tabs tabs-secondary'" [contentClass]="'card'"
+                class="classic-tabs">
+                <mdb-tab heading="<i class='fas fa-search'></i>نقد و برسی">
+                    <div class="row">
+                        <div class="col-12">
+                            <br>
+                            <div class="row p-4 text-start">
+                                <div class="col-4">
+
+                                    <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+                                        <img class="img-fluid"
+                                            src="https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg"
+                                            alt="Sample image">
+                                        <a>
+                                            <div class="mask rgba-white-slight"></div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-8">
+
+                                    <h3 class="font-weight-bold mb-3">
+                                        <strong>نقد و برسی کلی</strong>
+                                    </h3>
+                                    <h6 class="sub-title">گوشی samsung galaxy s20 ultra با حافظه 512 GB
+                                    </h6>
+                                    <p class="lh-30">{{ tempDescription }}</p>
+                                    <div class="full-width">
+                                        <button mdbBtn type="button" size="sm" color="secondary" rounded="true"
+                                            mdbWavesEffect class="float-left" (click)="toggleDescription()">
+                                            ادامه مطلب ...
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12">
+
+                                    <div class="row flex-center justify-content-center mt-5">
+                                        <div class="col-7">
+
+                                            <div class="product-chart-status">
+                                                <canvas mdbChart [chartType]="chartType" [datasets]="chartDatasets"
+                                                    [labels]="chartLabels" [colors]="chartColors"
+                                                    [options]="chartOptions" [legend]="true"
+                                                    (chartHover)="chartHovered($event)"
+                                                    (chartClick)="chartClicked($event)">
+                                                </canvas>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <hr class="my-5">
+
+                            <mdb-accordion class="text-start" [multiple]="true">
+                                <mdb-accordion-item [collapsed]="false">
+                                    <mdb-accordion-item-head>ردمی نوت 8 پرو؛ برای داشتن گوشی خوب زیاد هزینه نکنید
+                                    </mdb-accordion-item-head>
+                                    <mdb-accordion-item-body>
+                                        <p class="lh-30">
+                                            شیائومی همیشه گوشی‌‌هایی راهی بازار می‌کند که نسبت به پولی که برای آن
+                                            می‌پردازید، ویژگی‌های بسیار جذابی را پیش روی شما قرار می‌دهند. یکی دیگر از
+                                            گوشی‌‌های خوش ساخت این شرکت «ردمی نوت 8 پرو» است. این تلفن همراه هوشمند از
+                                            بدنه‌ای شیشه‌ای بهره می‌برد و رنگ‌های در نظر گرفته شده برای آن هم نظر شما را
+                                            به سمت خود جلب می‌کند. مخصوصا رنگ سبز آن که واقعا فوق‌العاده به نظر می‌رسد.
+                                        </p>
+                                        <img class="description-images"
+                                            src="https://dkstatics-public.digikala.com/digikala-reviews/101467571.jpg"
+                                            alt="image1">
+                                    </mdb-accordion-item-body>
+                                </mdb-accordion-item>
+
+                                <mdb-accordion-item [collapsed]="false">
+                                    <mdb-accordion-item-head>صفحه نمایش و طراحی</mdb-accordion-item-head>
+                                    <mdb-accordion-item-body>
+                                        <p class="lh-30">
+                                            شیائومی برای گوشی ردمی نوت 8 از یک صفحه نمایش IPS استفاده کرده است. دوست
+                                            داشتیم که صفحه نمایش OLED برای این گوشی استفاده می‌شد که چنین چیزی رخ نداده
+                                            است. در حالی که صفحه نمایش کیفیت شگفت‌انگیزی ندارد، همه چیز را خوب نشان
+                                            می‌دهد. صفحه نمایشی که به اندازه کافی روشن و درخشان است و می‌تواند طیف وسیعی
+                                            از رنگ‌ها را به نمایش دراورد. این صحفه نمایش کنتراست مناسبی هم دارد. به هر
+                                            حال اگر به دنبال صفحه نمایشی هستید که رنگ‌ها را به شدت قوی نشان دهد، نباید
+                                            به سمت این محصول بیایید. کیفیت صفحه نمایش زمانی مشخص می‌شود که شما این گوشی
+                                            را در حالت «تاریک» قرار می‌دهید. میزان کنتراست آنقدر بالا است که صفحه نمایش
+                                            رنگ مشکی را به خوبی نشان می‌دهد و دیگر رنگ سیاه به صورت خاکستری تیره نشان
+                                            داده نمی‌شود. البته شیائومی این امکان را در اختیار کاربران قرار داده که
+                                            بتوانند قدرت نمایش رنگ‌ها در این گوشی را تغییر دهند. می‌توانید رنگ‌ها را
+                                            سردتر یا گرم‌تر کنید. گزینه‌های مختلفی هم برای تنظیم کنتراست در اختیار
+                                            خواهید داشت.
+                                        </p>
+                                        <img class="description-images"
+                                            src="https://dkstatics-public.digikala.com/digikala-reviews/101467572.jpg"
+                                            alt="image2">
+                                    </mdb-accordion-item-body>
+                                </mdb-accordion-item>
+
+                                <mdb-accordion-item [collapsed]="false">
+                                    <mdb-accordion-item-head>باتری</mdb-accordion-item-head>
+                                    <mdb-accordion-item-body>
+                                        <p class="lh-30">
+                                            گوشی ردمی نوت 8 پرو در قسمت باتری عملکرد خوب و قابل قبولی دارد. اگر میزان
+                                            روشنایی صفحه نمایش را روی حداکثر قرار ندهید، باتری در طول روز می‌تواند گوشی
+                                            را روشن نگه‌دارد. این گوشی از شارژ بی‌سیم ۱۸ وات پشتیبانی می‌کند. همین موضوع
+                                            باعث شده که بتوانید باتری گوشی را خیلی سریع شارژ‌کنید. شیائومی ادعا کرده که
+                                            باتری این گوشی را می‌توان در مدت دو ساعت کامل شارژ کرد. البته که زمان چندان
+                                            کمی هم به حساب نمی‌آید. با این حال می‌توانید با نیم‌ ساعت شارژ ۳۵ درصد ظرفیت
+                                            باتری را شارژ کنید. در مدت زمان یک ساعت هم ۶۵ درصد ظرفیت باتری شارژ می‌شود.
+                                        </p>
+                                        <p>
+                                            نوع استفاده‌ای که از گوشی می‌کنید روی طول عمر باتری هم تاثیر می‌گذارد. اگر
+                                            میزان نور صفحه نمایش را زیاد کنید و از اینترنت موبایل استفاده کنید و به
+                                            عکاسی هم مشغول شوید، باتری عملکرد خوبی از خود نشان نمی‌دهد و نیاز دارید که
+                                            آن را سریع شارژ‌ کنید.
+                                        </p>
+                                        <img class="description-images"
+                                            src="https://dkstatics-public.digikala.com/digikala-reviews/101467573.jpg"
+                                            alt="image3">
+                                    </mdb-accordion-item-body>
+                                </mdb-accordion-item>
+
+                                <mdb-accordion-item [collapsed]="false">
+                                    <mdb-accordion-item-head>پشتیبانی از جک ۳٫۵ میلی‌متری خروجی صدا
+                                    </mdb-accordion-item-head>
+                                    <mdb-accordion-item-body>
+                                        <p class="lh-30">
+                                            در حالی که جک ۳٫۵ میلی‌متری خروجی صدا از روی بسیاری از گوشی‌های پرچم‌دار
+                                            بازار حذف شده، دیدن آن روی گوشی ردمی نوت 8 پرو جالب و خوشحال کننده است.
+                                            کیفیت صدای این گوشی با هدفون بسیار خوب است. حتی اگر از هدفون سیم هم برای این
+                                            گوشی استفاده نکنید، کیفیت صدایی که روی هدفون بی‌سیم می‌شنوید هم در سطح خیلی
+                                            خوبی قرار دارد. تنها مشکل این گوشی در زمینه پخش صدا، می‌تواند بلندگوی مونوی
+                                            آن باشد. تنها یک بلندگو برای خود گوشی در نظر گرفته شده که گرچه کیفیت خوبی
+                                            دارد، اما صدای آن چندان بلند نیست. همین موضوع باعث شده که گوش دادن به موسیقی
+                                            با هدفون تجربه بهتری به شما منتقل کند.
+                                        </p>
+                                        <img class="description-images"
+                                            src="https://dkstatics-public.digikala.com/digikala-reviews/101467574.jpg"
+                                            alt="image3">
+                                    </mdb-accordion-item-body>
+                                </mdb-accordion-item>
+                            </mdb-accordion>
+                        </div>
+                    </div>
+                </mdb-tab>
+
+                <mdb-tab heading="<i class='fas fa-info'></i>مشخصات">
+                    <div class="row">
+                        <div class="col-12 py-4 px-5 text-start product-specifi">
+                            <br>
+                            <h3 class="font-weight-bold mb-3">
+                                <strong> مشخصات فنی </strong>
+                            </h3>
+                            <h6 class="sub-title">گوشی samsung galaxy s20 ultra با حافظه 512 GB
+                            </h6>
+
+                            <div class="full-width my-4">
+                                <h5>
+                                    <mdb-icon fas icon="caret-left"></mdb-icon>
+                                    مشخصات کلی
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <h6>ابعاد</h6>
+                                        <p> 161.4x76.4x8.8 میلی‌متر </p>
+                                    </li>
+                                    <li>
+                                        <h6>توضیحات سیم کارت</h6>
+                                        <p> سایز نانو (8.8 × 12.3 میلی‌متر) </p>
+                                    </li>
+                                    <li>
+                                        <h6>وزن</h6>
+                                        <p> 200 گرم </p>
+                                    </li>
+                                    <li>
+                                        <h6>ساختار بدنه</h6>
+                                        <p> قاب پشتی و جلو از جنس شیشه با محافظت Gorilla Glass 5 </p>
+                                    </li>
+                                    <li>
+                                        <h6>ویژگی‌های خاص</h6>
+                                        <p> مجهز به حس‌گر اثرانگشت , فبلت , مناسب عکاسی , مناسب بازی </p>
+                                    </li>
+                                    <li>
+                                        <h6>تعداد سیم کارت</h6>
+                                        <p> دو سیم کارت </p>
+                                    </li>
+                                    <li>
+                                        <h6>زمان معرفی</h6>
+                                        <p> 24 سپتامبر 2019 </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr>
+
+                            <div class="full-width my-4">
+                                <h5>
+                                    <mdb-icon fas icon="caret-left"></mdb-icon>
+                                    پردازنده
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <h6>تراشه</h6>
+                                        <p> Mediatek Helio G90T (12nm) Chipset </p>
+                                    </li>
+                                    <li>
+                                        <h6>پردازنده‌ی مرکزی</h6>
+                                        <p> Dual-core Cortex-A76 & Hexa-core Cortex-A55 CPU </p>
+                                    </li>
+                                    <li>
+                                        <h6>نوع پردازنده</h6>
+                                        <p> 64 بیت </p>
+                                    </li>
+                                    <li>
+                                        <h6>فرکانس پردازنده‌ی مرکزی</h6>
+                                        <p> 2.05 و 2.0 گیگاهرتز </p>
+                                    </li>
+                                    <li>
+                                        <h6>پردازنده گرافیکی</h6>
+                                        <p> Mali-G76 MC4 GPU </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr>
+
+                            <div class="full-width my-4">
+                                <h5>
+                                    <mdb-icon fas icon="caret-left"></mdb-icon>
+                                    حافظه
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <h6>حافظه داخلی</h6>
+                                        <p> 128 گیگابایت </p>
+                                    </li>
+                                    <li>
+                                        <h6>مقدار RAM</h6>
+                                        <p> 6 گیگابایت </p>
+                                    </li>
+                                    <li>
+                                        <h6>پشتیبانی از کارت حافظه جانبی</h6>
+                                        <p> microSD </p>
+                                    </li>
+                                    <li>
+                                        <h6>استاندارد کارت حافظه</h6>
+                                        <p> UFS 2.1 </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr>
+
+                            <div class="full-width my-4">
+                                <h5>
+                                    <mdb-icon fas icon="caret-left"></mdb-icon>
+                                    سایر امکانات
+                                </h5>
+                                <p class="other-description"> دوربین دوم از نوع (Ultrawide)، با رزولوشن 8 مگاپیکسل،
+                                    فاصله کانونی لنز 13 میلی‌متر
+                                    (Focal Length 13 mm)، سایز سنسور 1/4 اینچ (&#39;&#39;Sensor Size 1/4)، دریچه‌ی
+                                    دیافراگم f/2.2، ثبت تصاویر با پیکسل‎هایی به سایز 1.12 میکرومتر (1.12µm Pixel Size)
+                                </p>
+                                <p class="other-description"> دوربین دوم از نوع (Ultrawide)، با رزولوشن 8 مگاپیکسل،
+                                    فاصله کانونی لنز 13 میلی‌متر
+                                    (Focal Length 13 mm)، سایز سنسور 1/4 اینچ (&#39;&#39;Sensor Size 1/4)، دریچه‌ی
+                                    دیافراگم f/2.2، ثبت تصاویر با پیکسل‎هایی به سایز 1.12 میکرومتر (1.12µm Pixel Size)
+                                </p>
+                                <p class="other-description"> دوربین دوم از نوع (Ultrawide)، با رزولوشن 8 مگاپیکسل،
+                                    فاصله کانونی لنز 13 میلی‌متر
+                                    (Focal Length 13 mm)، سایز سنسور 1/4 اینچ (&#39;&#39;Sensor Size 1/4)، دریچه‌ی
+                                    دیافراگم f/2.2، ثبت تصاویر با پیکسل‎هایی به سایز 1.12 میکرومتر (1.12µm Pixel Size)
+                                </p>
+                                <p class="other-description"> دوربین دوم از نوع (Ultrawide)، با رزولوشن 8 مگاپیکسل،
+                                    فاصله کانونی لنز 13 میلی‌متر
+                                    (Focal Length 13 mm)، سایز سنسور 1/4 اینچ (&#39;&#39;Sensor Size 1/4)، دریچه‌ی
+                                    دیافراگم f/2.2، ثبت تصاویر با پیکسل‎هایی به سایز 1.12 میکرومتر (1.12µm Pixel Size)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </mdb-tab>
+
+                <mdb-tab heading="<i class='fas fa-comments'></i>نظرات کاربران">
+                    <div class="row">
+                        <div class="col-12 text-start py-4 px-5">
+                            <br>
+                            <div class="row">
+                                <div class="col-6">
+
+                                    <h3 class="font-weight-bold mb-3">
+                                        <strong> نظرات کاربران </strong>
+                                    </h3>
+                                    <h6 class="sub-title">1436 نفر نظر دادند. 4.7 میانگین امتیاز کاربران به این محصول
+                                    </h6>
+
+                                </div>
+                                <div class="col-6">
+
+                                    <button mdbBtn class="float-left" type="button" color="secondary" rounded="true"
+                                        mdbWavesEffect>
+                                        <mdb-icon fas icon="comment-medical"></mdb-icon>
+                                        ثبت نظر جدید
+                                    </button>
+
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <hr>
+                            </div>
+                            <div class="col-12 my-4">
+                                <span>مرتب سازی بر اساس : </span>
+
+                                <div style="font-size: 12px; margin-top: 14px;">
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" [checked]="true" class="form-check-input"
+                                            id="materialInline1" name="inlineMaterialRadiosExample" mdbInput>
+                                        <label class="form-check-label" for="materialInline1">بیشترین امتیاز</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="materialInline2"
+                                            name="inlineMaterialRadiosExample" mdbInput>
+                                        <label class="form-check-label" for="materialInline2">فقط خریداران</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="materialInline3"
+                                            name="inlineMaterialRadiosExample" mdbInput>
+                                        <label class="form-check-label" for="materialInline3">جدیدترین ها</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="col-12">
+
+                                <hr>
+
+                            </div>
+                            <div class="col-12">
+
+                                <div class="row pt-3 comment-panel">
+                                    <div class="col-2">
+
+                                        <img class="avatar rounded-circle z-depth-1-half"
+                                            src="https://mdbootstrap.com/img/Photos/Avatars/img (8).jpg"
+                                            alt="profile image">
+                                        <span class="buyer">خریدار</span>
+
+                                    </div>
+                                    <div class="col-10 p-3">
+
+                                        <div class="flex-center justify-content-between align-items-center"
+                                            style="height: auto !important;">
+                                            <h5 class="font-weight-bold">امیرحسین قربانی</h5>
+                                            <h6>
+                                                <mdb-icon fas icon="thumbs-up"></mdb-icon>
+                                                خرید این محصول رو توصیه میکنم
+                                            </h6>
+                                        </div>
+                                        <div class="flex-center justify-content-start p-2 title-comment" style="height: auto;">
+                                            <mdb-icon fas icon="star" style="color: #ffa000;"></mdb-icon>
+                                            <span>4.7 امتیاز </span>
+                                            <mdb-icon fas icon="calendar-alt" class="mr-3" style="color: #6d6d6d;">
+                                            </mdb-icon>
+                                            <span>
+                                                در تاریخ ۱۶ آذر ۱۳۹۸
+                                            </span>
+                                        </div>
+                                        <p class="lh-30">
+                                            از همان ابتدا که گوشی را در دست بگیرید حس بسیار عالی پیدا خواهید کرد ظرافت
+                                            صفحه نمایش و گرادیانت رنگ پشت گوشی بسیار زیباست محیط کاربری بسیار سریع و
+                                            روان بدون هیچ مکث و لگ . زمان روشن شدن گوشی و یا ری استارت بسیار سریع می
+                                            باشد. تنظیم تنالیته رنگ صفحه (رنگ گرم . سرد و..) عالی . در مورد عکاسی و فیلم
+                                            برداری گزینه تنظیمات متفاوتی در اختیار شما قراردارد.
+                                        </p>
+                                        <div>
+                                            <p>آیا با این نظر موافق هستید ؟</p>
+                                            <a class="confrim-comment">
+                                                <mdb-icon fas icon="thumbs-up" style="color: #7e57c2 ;"></mdb-icon>
+                                                <span>120</span>
+                                            </a>
+                                            <a class="confrim-comment">
+                                                <mdb-icon fas icon="thumbs-down" style="color: #757575 ;"></mdb-icon>
+                                                <span>12</span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row pt-3 comment-panel">
+                                    <div class="col-2">
+
+                                        <img class="avatar rounded-circle z-depth-1-half"
+                                            src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
+                                            alt="profile image">
+
+                                    </div>
+                                    <div class="col-10 p-3">
+
+                                        <div class="flex-center justify-content-between align-items-center"
+                                            style="height: auto !important;">
+                                            <h5 class="font-weight-bold">زهرا عزیزی</h5>
+                                            <h6>
+                                                <mdb-icon fas icon="thumbs-up"></mdb-icon>
+                                                خرید این محصول رو توصیه میکنم
+                                            </h6>
+                                        </div>
+                                        <div class="flex-center justify-content-start p-2 title-comment" style="height: auto;">
+                                            <mdb-icon fas icon="star" style="color: #ffa000;"></mdb-icon>
+                                            <span>4.7 امتیاز </span>
+                                            <mdb-icon fas icon="calendar-alt" class="mr-3" style="color: #6d6d6d;">
+                                            </mdb-icon>
+                                            <span>
+                                                در تاریخ ۱۶ آذر ۱۳۹۸
+                                            </span>
+                                        </div>
+                                        <p class="lh-30">
+                                            از همان ابتدا که گوشی را در دست بگیرید حس بسیار عالی پیدا خواهید کرد ظرافت
+                                            صفحه نمایش و گرادیانت رنگ پشت گوشی بسیار زیباست محیط کاربری بسیار سریع و
+                                            روان بدون هیچ مکث و لگ . زمان روشن شدن گوشی و یا ری استارت بسیار سریع می
+                                            باشد. تنظیم تنالیته رنگ صفحه (رنگ گرم . سرد و..) عالی . در مورد عکاسی و فیلم
+                                            برداری گزینه تنظیمات متفاوتی در اختیار شما قراردارد.
+                                        </p>
+                                        <div>
+                                            <p>آیا با این نظر موافق هستید ؟</p>
+                                            <a class="confrim-comment">
+                                                <mdb-icon fas icon="thumbs-up" style="color: #7e57c2 ;"></mdb-icon>
+                                                <span>120</span>
+                                            </a>
+                                            <a class="confrim-comment">
+                                                <mdb-icon fas icon="thumbs-down" style="color: #757575 ;"></mdb-icon>
+                                                <span>12</span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row pt-3 comment-panel">
+                                    <div class="col-2">
+
+                                        <img class="avatar rounded-circle z-depth-1-half"
+                                            src="https://mdbootstrap.com/img/Photos/Avatars/img%20(12).jpg"
+                                            alt="profile image">
+
+                                    </div>
+                                    <div class="col-10 p-3">
+
+                                        <div class="flex-center justify-content-between align-items-center"
+                                            style="height: auto !important;">
+                                            <h5 class="font-weight-bold">مینا کرامتی</h5>
+                                            <h6>
+                                                <mdb-icon fas icon="thumbs-up"></mdb-icon>
+                                                خرید این محصول رو توصیه میکنم
+                                            </h6>
+                                        </div>
+                                        <div class="flex-center justify-content-start p-2 title-comment" style="height: auto;">
+                                            <mdb-icon fas icon="star" style="color: #ffa000;"></mdb-icon>
+                                            <span>4.7 امتیاز </span>
+                                            <mdb-icon fas icon="calendar-alt" class="mr-3" style="color: #6d6d6d;">
+                                            </mdb-icon>
+                                            <span>
+                                                در تاریخ ۱۶ آذر ۱۳۹۸
+                                            </span>
+                                        </div>
+                                        <p class="lh-30">
+                                            از همان ابتدا که گوشی را در دست بگیرید حس بسیار عالی پیدا خواهید کرد ظرافت
+                                            صفحه نمایش و گرادیانت رنگ پشت گوشی بسیار زیباست محیط کاربری بسیار سریع و
+                                            روان بدون هیچ مکث و لگ . زمان روشن شدن گوشی و یا ری استارت بسیار سریع می
+                                            باشد. تنظیم تنالیته رنگ صفحه (رنگ گرم . سرد و..) عالی . در مورد عکاسی و فیلم
+                                            برداری گزینه تنظیمات متفاوتی در اختیار شما قراردارد.
+                                        </p>
+                                        <div>
+                                            <p>آیا با این نظر موافق هستید ؟</p>
+                                            <a class="confrim-comment">
+                                                <mdb-icon fas icon="thumbs-up" style="color: #7e57c2 ;"></mdb-icon>
+                                                <span>120</span>
+                                            </a>
+                                            <a class="confrim-comment">
+                                                <mdb-icon fas icon="thumbs-down" style="color: #757575 ;"></mdb-icon>
+                                                <span>12</span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row pt-3 comment-panel">
+                                    <div class="col-2">
+
+                                        <img class="avatar rounded-circle z-depth-1-half"
+                                            src="https://mdbootstrap.com/img/Photos/Avatars/img%20(28).jpg"
+                                            alt="profile image">
+                                        <span class="buyer">خریدار</span>
+
+                                    </div>
+                                    <div class="col-10 p-3">
+
+                                        <div class="flex-center justify-content-between align-items-center"
+                                            style="height: auto !important;">
+                                            <h5 class="font-weight-bold">فریبا حسینی</h5>
+                                            <h6>
+                                                <mdb-icon fas icon="thumbs-up"></mdb-icon>
+                                                خرید این محصول رو توصیه میکنم
+                                            </h6>
+                                        </div>
+                                        <div class="flex-center justify-content-start p-2 title-comment" style="height: auto;">
+                                            <mdb-icon fas icon="star" style="color: #ffa000;"></mdb-icon>
+                                            <span>4.7 امتیاز </span>
+                                            <mdb-icon fas icon="calendar-alt" class="mr-3" style="color: #6d6d6d;">
+                                            </mdb-icon>
+                                            <span>
+                                                در تاریخ ۱۶ آذر ۱۳۹۸
+                                            </span>
+                                        </div>
+                                        <p class="lh-30">
+                                            از همان ابتدا که گوشی را در دست بگیرید حس بسیار عالی پیدا خواهید کرد ظرافت
+                                            صفحه نمایش و گرادیانت رنگ پشت گوشی بسیار زیباست محیط کاربری بسیار سریع و
+                                            روان بدون هیچ مکث و لگ . زمان روشن شدن گوشی و یا ری استارت بسیار سریع می
+                                            باشد. تنظیم تنالیته رنگ صفحه (رنگ گرم . سرد و..) عالی . در مورد عکاسی و فیلم
+                                            برداری گزینه تنظیمات متفاوتی در اختیار شما قراردارد.
+                                        </p>
+                                        <div>
+                                            <p>آیا با این نظر موافق هستید ؟</p>
+                                            <a class="confrim-comment">
+                                                <mdb-icon fas icon="thumbs-up" style="color: #7e57c2 ;"></mdb-icon>
+                                                <span>120</span>
+                                            </a>
+                                            <a class="confrim-comment">
+                                                <mdb-icon fas icon="thumbs-down" style="color: #757575 ;"></mdb-icon>
+                                                <span>12</span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </mdb-tab>
+                <mdb-tab heading="<i class='fas fa-question-circle'></i>پرسش و پاسخ">
+                    <div class="row">
+                        <div class="col-12">
+                            <br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima,
+                                soluta
+                                doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam,
+                                pariatur. Tempora,
+                                placeat ratione porro voluptate odit minima.</p>
+                        </div>
+                    </div>
+                </mdb-tab>
+            </mdb-tabset>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.chip {
+  margin: 0px !important;
+
+  span {
+    padding-inline-start: 14px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 490px) {
+  .chip span {
+    display: none !important;
+  }
+}

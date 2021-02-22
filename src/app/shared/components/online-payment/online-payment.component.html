@@ -1,0 +1,91 @@
+<div class="row my-5" *ngIf="loader">
+    <div class="col-12">
+
+        <div class="p-5 my-5 flex-center">
+            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+        </div>
+
+    </div>
+</div>
+
+<div class="container my-5" *ngIf="!loader">
+    <div class="row" style="padding-top: 140px;">
+        <div class="col-12">
+
+            <div class="card-item p-3">
+
+                <div class="row">
+                    <ng-container *ngIf="validatePay()">
+                        <div class="col-12 flex-center justify-content-center">
+
+                            <mdb-icon style="color: #00C851 !important;" fas icon="check-circle" size="5x"
+                                class="mb-3 animated rotateIn"></mdb-icon>
+
+                        </div>
+                        <div class="col-12">
+
+                            <p class="text-center font-weight-bold">{{ second }}</p>
+
+                        </div>
+                    </ng-container>
+                    <div class="col-12">
+
+                        <h3 *ngIf="validatePay()" class="text-success font-weight-bold text-center">پرداخت موفقیت
+                            آمیز</h3>
+
+                        <h3 *ngIf="!validatePay()" class="text-danger font-weight-bold text-center">متاسفانه پرداخت
+                            انجام نشد . لطفا بعدا مجدد امتحان کنید</h3>
+
+                    </div>
+                    <ng-container *ngIf="validatePay()">
+                        <div class="col-12">
+                            <hr>
+                        </div>
+                        <div class="col-12">
+
+                            <h3>کاربرگرامی ! با تشکر از پرداخت شما</h3>
+
+                            <ng-container *ngIf="redirectToLink.forPayment === 1">
+                                <p *ngIf="redirectToLink.linkType === 1">کد رهگیری درخواست شما برابر <span
+                                        class="trcode">{{
+                                        createAuth.requestTC }}</span> میباشد .
+                                </p>
+
+                                <p
+                                    *ngIf="redirectToLink.linkType === 3 && redirectToLink.discountCode && redirectToLink.discountCode?.length">
+                                    کد تخفیف شما برابر <span class="trcode">{{ redirectToLink.discountCode }}</span>
+                                    میباشد . برای مشاهده جزییات کد تخفیفتان میتوانید از پنل کاربری ، زیر شاخه خدمات و
+                                    تسهیلات از سفارشات را انتخاب کنید . اولین سطر از جدول سفارش فعلیتان است .
+                                </p>
+                            </ng-container>
+
+
+                        </div>
+                        <div class="col-12" *ngIf="redirectToLink.forPayment === 1">
+
+                            <p *ngIf="redirectToLink.linkType === 1">با کلیک روی <a class="link-view"
+                                    (click)="viewDetails()">اینجا</a> با مد نظر داشتن کد
+                                رهگیری میتوانید کالای سفارشی خود را از تعاونی تحویل بگیرید .</p>
+
+                            <p
+                                *ngIf="redirectToLink.linkType === 3 && redirectToLink.discountCode && redirectToLink.discountCode?.length">
+                                پس از 20 ثانیه به سایت مقصد هدایت میشوید و میتوانید
+                                از کد تخفیفتان استفاده کنید . </p>
+
+                        </div>
+                        <div class="col-12 d-flex justify-content-center"
+                            *ngIf="redirectToLink.forPayment === 1 && redirectToLink.linkType === 3 && redirectToLink.apiLink">
+
+                            <button mdbBtn type="button" color="secondary" rounded="true" outline="true" size="md"
+                                mdbWavesEffect (click)="redirectTo()">انتقال به سایت مقصد</button>
+
+                        </div>
+
+                    </ng-container>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,178 @@
+<div mdbBtn mdbWavesEffect id="live-chat-button" class="z-depth-2 goto-chat" (click)="openLiveChatPanel()">
+    <img src="../../../../assets/images/Icons/whatsapp(1).png" alt="live-chat">
+</div>
+
+<div id="live-chat-panel" class="live-chat-panel">
+
+    <div class="header-lc-panel">
+
+        <div class="row">
+            <div class="col-2">
+
+                <mdb-icon fas icon="comments" class="chat-icon-header"></mdb-icon>
+
+            </div>
+            <div class="col-8">
+
+                <h4>به گفتگو زنده تعاون خوش آمدید</h4>
+                <h6>در اولین فرصت پاسخگوی سوالاتتان هستیم</h6>
+
+            </div>
+            <div class="col-2">
+
+                <mdb-icon fas icon="minus" class="close-icon" (click)="closeLiveChatPanel()"></mdb-icon>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content-lc-panel">
+
+        <!-- <div class="row">
+            <div class="col-12">
+
+                <div id="create-room-form">
+                    <form (ngSubmit)="onCreateLiveChatRoom()" [formGroup]="startLiveChatForm">
+                        <div class="row">
+                            <div class="col-12">
+
+                                <div class="md-form md-outline">
+                                    <input type="text" id="fullname" class="form-control" length="30" mdbCharCounter
+                                        mdbInput name="fullname_livechat" [formControl]="fullname_livechat">
+                                    <label for="fullname">نام خودتان را وارد کنید</label>
+                                </div>
+                                <div [hidden]="fullname_livechat.valid || fullname_livechat.untouched">
+                                    <div [hidden]="!fullname_livechat.hasError('required')"
+                                        class="text-danger text-center valid-m">
+                                        نام نمیتواند خالی باشد
+                                    </div>
+                                    <div [hidden]="!fullname_livechat.hasError('maxlength')"
+                                        class="text-danger text-center valid-m">
+                                        کارکتر های وارد شده بیشتر از تعداد مجاز است
+                                    </div>
+                                </div>
+
+                                <div class="md-form md-outline">
+                                    <input type="text" id="phonenumber" class="form-control" length="11" mdbCharCounter
+                                        mdbInput name="phonenumber_livechat" [formControl]="phonenumber_livechat">
+                                    <label for="phonenumber">شماره تماس خودتان را وارد کنید</label>
+                                </div>
+                                <div [hidden]="phonenumber_livechat.valid || phonenumber_livechat.untouched">
+                                    <div [hidden]="!phonenumber_livechat.hasError('required')"
+                                        class="text-danger text-center valid-m">
+                                        شماره تماس نمیتواند خالی باشد
+                                    </div>
+                                    <div [hidden]="!phonenumber_livechat.hasError('pattern')"
+                                        class="text-danger text-center valid-m">
+                                        شماره وارد شده صحیح نیست
+                                    </div>
+                                </div>
+
+                                <div class="md-form md-outline">
+                                    <input type="text" id="titlechat" class="form-control" length="50" mdbCharCounter
+                                        mdbInput name="title_livechat" [formControl]="title_livechat">
+                                    <label for="titlechat">عنوان گفتگو خودتان را وارد کنید</label>
+                                </div>
+                                <div [hidden]="title_livechat.valid || title_livechat.untouched">
+                                    <div [hidden]="!title_livechat.hasError('required')"
+                                        class="text-danger text-center valid-m">
+                                        عنوان گفتگو نمیتواند خالی باشد
+                                    </div>
+                                    <div [hidden]="!title_livechat.hasError('maxlength')"
+                                        class="text-danger text-center valid-m">
+                                        کارکتر های وارد شده بیشتر از تعداد مجاز است
+                                    </div>
+                                </div>
+
+                                <div class="col-12 submit-start-lc">
+
+                                    <button mdbBtn type="submit" size="md" color="primary" rounded="true" mdbWavesEffect
+                                        [disabled]="!startLiveChatForm.valid">ارسال و شروع به گفتگو</button>
+
+                                </div>
+
+                                <div *ngIf="loader2" class="col-12">
+
+                                    <div class="p-2 flex-center">
+                                        <mdb-spinner spinnerColor="blue"></mdb-spinner>
+                                    </div>
+
+                                </div>
+
+                                <div *ngIf="errorLoginRoom" class="col-12 mt-2">
+
+                                    <p class="text-danger text-center">مشکلی در ورود در سیستم پیش آمده</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="chat-form">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <div class="messages-panel">
+
+                                <div class="row">
+                                    <div class="col-12 message-item-wrapper">
+
+                                        <div class="message-item message-for-user">
+
+                                            <span>1399/04/30</span>
+                                            <p>سلام . من در بخش ثبت نام مشکل دارم</p>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12 message-item-wrapper">
+
+                                        <div class="message-item message-for-support">
+
+                                            <span>1399/04/30</span>
+                                            <p>سلام. خوش آمدید. مشکلتان حل شد</p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="message-send">
+
+                                <div class="md-form">
+                                    <input type="text" id="message-input" class="form-control" [(ngModel)]="messageText"
+                                        (input)="onWritingMessage()" length="3000" mdbInput>
+                                    <label for="message-input">درخواست خود را بنویسید</label>
+                                </div>
+
+                                <div class="md-button">
+                                    <a mdbBtn floating="true" size="sm" color="purple" mdbWavesEffect>
+                                        <mdb-icon fas icon="paper-plane"></mdb-icon>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div> -->
+
+        <iframe [src]="liveChatUrl | safe" frameborder="0" title="live chat"></iframe>
+
+    </div>
+
+    <div class="footer-lc-panel">
+
+        <p>توسعه دهنده <a href="#"><strong>امیرحسین قربانی</strong></a></p>
+
+    </div>
+
+</div>

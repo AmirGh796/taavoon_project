@@ -1,0 +1,16 @@
+<div class="range-panel">
+    <!-- <a mdbBtn gradient="blue" floating="true" size="sm" mdbWavesEffect>
+        <mdb-icon fas icon="plus" (click)="changeValue(+100000)"></mdb-icon>
+    </a> -->
+    <mdb-range-input #rangeInput dir="ltr" (rangeValueChange)="onRangeValueChange($event)" id="range" [step]="stepInput"
+        [min]="minInput" [max]="maxInput">
+    </mdb-range-input>
+    <!-- <a mdbBtn gradient="blue" floating="true" size="sm" mdbWavesEffect>
+        <mdb-icon fas icon="minus" (click)="changeValue(-100000)"></mdb-icon>
+    </a> -->
+</div>
+<div *ngIf="maxPrice !== null || maxPrice !== undefined && minPrice !== null || minPrice !== undefined"
+    class="price-panel text-primary">
+    <p id="max-price">تومان {{ maxPrice }}</p>
+    <p id="min-price">تومان {{ minPrice }}</p>
+</div>

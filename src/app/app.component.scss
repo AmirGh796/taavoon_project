@@ -1,0 +1,19 @@
+.loading-page {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.loading-page p {
+  color: #8a528a;
+  padding-bottom: 24px;
+  padding-top: 24px;
+}

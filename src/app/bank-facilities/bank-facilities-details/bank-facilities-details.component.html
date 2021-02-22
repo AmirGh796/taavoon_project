@@ -1,0 +1,172 @@
+<div class="screen-wrapper pt-5">
+    <div class="container">
+        <div class="row my-5" *ngIf="loader">
+            <div class="col-12">
+
+                <div class="p-5 my-5 flex-center">
+                    <mdb-spinner spinnerColor="blue"></mdb-spinner>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="pageTitleRoute" class="row pt-5 mt-5" *ngIf="!loader">
+            <div class="col-12">
+
+                <div class="card-item page-title">
+                    <div class="flex-center justify-content-start">
+
+                        <mdb-icon fas icon="gift" class="icon-26"></mdb-icon>
+                        <h3><a [routerLink]="['/home/bank-facilities']">خدمات</a></h3>
+                        <mdb-icon fas icon="angle-double-left" class="icon-20 mr-1"></mdb-icon>
+                        <h3>{{ bankFacilitieItem?.forCategory_String }}</h3>
+                        <div class="chip float-left">
+                            <a [routerLink]="['/home/bank-facilities']">مشاهده خدمات</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row mb-5" *ngIf="!loader">
+            <div class="col-12">
+
+                <div class="card-item">
+
+                    <section class="magazine-section my-5">
+
+                        <h2 class="h1-responsive font-weight-bold text-center my-5">{{ bankFacilitieItem?.title }}</h2>
+                        <p class="text-center dark-grey-text w-responsive mx-auto mb-5">
+                            {{ bankFacilitieItem?.description }}</p>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+
+                                <div class="single-news mb-lg-0 mb-4">
+
+                                    <div class="view overlay rounded z-depth-1-half mb-4">
+                                        <img class="img-fluid" [src]="bankFacilitieItem?.imageUrlOrg"
+                                            alt="Sample image">
+                                        <a>
+                                            <div class="mask rgba-white-slight waves-light" mdbWavesEffect></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="news-data d-flex justify-content-between align-items-center">
+                                        <h6 class="font-weight-bold deep-orange-text darken-4"
+                                            *ngIf="bankFacilitieItem?.status === 0">
+                                            <mdb-icon fas icon="minus-circle"></mdb-icon>
+                                            {{ bankFacilitieItem?.status_String }}
+                                        </h6>
+                                        <h6 class="font-weight-bold green-text darken-2"
+                                            *ngIf="bankFacilitieItem?.status === 1">
+                                            <mdb-icon fas icon="check"></mdb-icon>
+                                            {{ bankFacilitieItem?.status_String }}
+                                        </h6>
+                                        <h6 class="font-weight-bold deep-orange-text"
+                                            *ngIf="bankFacilitieItem?.status === 2">
+                                            <mdb-icon fas icon="info"></mdb-icon>
+                                            {{ bankFacilitieItem?.status_String }}
+                                        </h6>
+                                        <h6 class="font-weight-bold deep-purple-text"
+                                            *ngIf="bankFacilitieItem?.status === 3">
+                                            <mdb-icon fas icon="bullhorn"></mdb-icon>
+                                            {{ bankFacilitieItem?.status_String }}
+                                        </h6>
+                                        <h6 class="font-weight-bold deep-purple-text"
+                                            *ngIf="bankFacilitieItem?.status === 4">
+                                            <mdb-icon fas icon="bullhorn"></mdb-icon>
+                                            {{ bankFacilitieItem?.status_String }}
+                                        </h6>
+                                        <!-- <p class="font-weight-bold dark-grey-text">
+                                            <mdb-icon far icon="clock" class="pr-2"></mdb-icon>
+                                            {{ utilityFunctions.dateConvertToPersian(bankFacilitieItem?.saveDate) }}
+                                        </p> -->
+                                        <p
+                                            *ngIf="bankFacilitieItem.expiredDate && bankFacilitieItem.expiredDate?.length">
+                                            <mdb-badge class="show-ex-date" color="red">
+                                                مدت اعتبار تا &nbsp; {{
+                                                utilityFunctions.expiredDateShow(bankFacilitieItem.expiredDate) }}
+                                            </mdb-badge>
+                                        </p>
+                                    </div>
+
+                                    <hr>
+
+                                    <h3 class="font-weight-bold dark-grey-text mb-3">
+                                        <a>{{ bankFacilitieItem?.subTitle }}</a>
+                                    </h3>
+                                    <div class="dark-grey-text mb-lg-0 mb-md-5 mb-4"
+                                        [innerHTML]="bankFacilitieItem?.options"></div>
+                                </div>
+
+                            </div>
+
+                            <div id="singleNewsSection" class="col-lg-6 col-md-12">
+                                <h5>برخی خدمات مشابه</h5>
+                                <hr>
+                                <div class="single-news mb-4">
+
+                                    <div class="row show-5item" style="cursor: pointer;"
+                                        *ngFor="let item of bankFacilitie5LastItems"
+                                        (click)="showOtherItem(item?.itemId)">
+                                        <div class="col-md-3">
+
+                                            <div class="view overlay rounded z-depth-1" style="height: 70px;"
+                                                [ngStyle]="{'background-color': item.backgroundColor}">
+                                                <img *ngIf="item?.imageUrlThumb && item?.imageUrlThumb?.length > 0"
+                                                    class="img-fluid" style="width: 100%; height: 100%;"
+                                                    [src]="item?.imageUrlThumb" alt="Sample image">
+                                                <a>
+                                                    <div class="mask rgba-white-slight waves-light" mdbWavesEffect>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-9">
+
+                                            <p class="font-weight-bold dark-grey-text">
+                                                {{ item?.title }}</p>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="col-11 text-truncate pl-0 mb-3">
+                                                    <a class="dark-grey-text">{{ showTextByLimitCharacters(100,
+                                                        item?.description) }}</a>
+                                                </div>
+                                                <a>
+                                                    <i class="fas fa-angle-double-left"></i>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <hr>
+
+                    <div *ngIf="bankFacilitieItem?.buttonActivate" class="full-width flex-center">
+
+                        <div *ngIf="loader2" class="flex-center">
+                            <mdb-spinner spinnerColor="blue"></mdb-spinner>
+                        </div>
+
+                        <button *ngIf="!loader2" mdbBtn type="button" size="md" color="default" rounded="true"
+                            (click)="openLink(bankFacilitieItem?.linkType)" mdbWavesEffect>ادامه فرایند</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

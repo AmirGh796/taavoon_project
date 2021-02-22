@@ -1,0 +1,57 @@
+header {
+  width: 90%;
+  margin-top: 80px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+header mdb-card {
+  border-radius: 20px;
+}
+
+.br-20 {
+  border-radius: 20px !important;
+}
+
+.bg-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-panel-contact {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  padding: 30px;
+}
+
+.form-panel-contact button {
+  margin-top: 20px;
+}
+
+section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+h3 {
+  font-weight: 500;
+  color: #102a43;
+}
+
+p {
+  margin-top: 20px;
+}
+
+ul {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #192464;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 10px;
+}

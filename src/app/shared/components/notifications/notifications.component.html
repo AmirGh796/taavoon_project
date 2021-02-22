@@ -1,0 +1,17 @@
+<div class="notif-wrapper">
+
+    <ul>
+
+        <li class="notif-item" (click)="goToMessages()">
+            <mdb-badge *ngIf="countOfMessages > 0" id="alerts-badge" color="indigo">{{ countOfMessages }}</mdb-badge>
+            <mdb-icon fas icon="envelope"></mdb-icon>
+        </li>
+
+        <!-- <li class="notif-item" (click)="openShoppingBasket()">
+            <mdb-badge *ngIf="countOfProducts > 0" id="basket-badge" color="indigo">{{ countOfProducts }}</mdb-badge>
+            <mdb-icon fas icon="shopping-basket"></mdb-icon>
+        </li> -->
+
+    </ul>
+
+</div>

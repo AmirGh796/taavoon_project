@@ -1,0 +1,149 @@
+.page-title {
+  margin-top: 86px;
+  margin-bottom: 40px;
+  padding: 30px;
+  color: #9c27b0;
+}
+
+.page-title h3 {
+  font-size: 16px !important;
+  font-weight: 500;
+  margin: 0px !important;
+}
+
+.chip {
+  margin: 0px !important;
+  margin-inline-start: auto !important;
+}
+
+.sort-tab {
+  font-size: 14px;
+  font-weight: 500;
+  color: #565656;
+}
+
+.side-panel h6 {
+  padding: 6px;
+}
+
+.side-panel hr {
+  margin-top: 6px !important;
+}
+
+.md-form input {
+  font-size: 14px;
+}
+
+.search-brand-card {
+  padding-top: 0px !important;
+  margin-top: -10px;
+  max-height: 350px;
+  overflow: auto;
+}
+
+.list-group-flush li {
+  padding-inline-start: 0px !important;
+  padding-inline-end: 0px !important;
+}
+
+.list-group-flush li mdb-checkbox {
+  margin-inline-end: 12px;
+  margin-inline-start: -10px;
+}
+
+.fa-brand {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.en-brand {
+  margin-inline-start: auto;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6d6d6d !important;
+}
+
+.switch-panel {
+  padding-top: 14px;
+}
+
+.switch-panel h6 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.number-of-show button {
+  font-size: 12px !important;
+}
+
+.total-products {
+  font-size: 16px;
+  font-weight: 500;
+  color: #5f5f5f;
+  margin-block-end: auto;
+  margin-block-start: auto;
+  margin-inline-start: 10px;
+}
+
+.total-products span {
+  font-weight: 400;
+  margin-inline-start: 8px;
+}
+
+.sticky {
+  position: sticky;
+  bottom: 2rem;
+}
+
+.side-cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+mdb-card {
+  width: 240px;
+}
+
+.viewer {
+  position: absolute;
+  left: 18px;
+  color: #3f729b;
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+mdb-card-body h5 {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  margin-bottom: 14px;
+  text-align: start;
+}
+
+mdb-card-title h4 {
+  font-size: 14px !important;
+  text-align: start;
+}
+
+mdb-card-body .rating {
+  font-size: 10px;
+  position: absolute;
+  left: 4px;
+  margin-top: 2px;
+}
+
+mdb-card-body .rating li mdb-icon i {
+  margin-inline-end: 4px !important;
+}
+
+mdb-card-text p {
+  font-size: 12px !important;
+}
+
+mdb-card-footer {
+  font-size: 14px;
+}
+
+mdb-card-footer mdb-icon {
+  margin-inline-end: 4px !important;
+}

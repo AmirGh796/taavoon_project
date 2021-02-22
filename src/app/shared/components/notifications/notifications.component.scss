@@ -1,0 +1,42 @@
+.notif-wrapper {
+  position: fixed;
+  width: 50px;
+  height: fit-content;
+  background-color: #301648d9;
+  color: #ffffff;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  top: 30%;
+  left: 0px;
+  z-index: 1500;
+}
+
+.notif-wrapper ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.notif-item {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.notif-item mdb-icon {
+  font-size: 20px;
+}
+
+mdb-badge {
+  position: absolute;
+  left: 30px;
+}
+
+#alerts-badge {
+  top: -5px;
+}
+
+#basket-badge {
+  top: 40px;
+}
